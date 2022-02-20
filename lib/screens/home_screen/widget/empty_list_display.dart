@@ -34,7 +34,7 @@ class EmptyListDisplay extends StatelessWidget {
         ),
         DefaultSizedBox.vertical(40.h),
         const HomeScreenArrow(),
-        DefaultSizedBox.vertical(40.h),
+        DefaultSizedBox.vertical(80.h),
       ],
     );
   }
@@ -67,6 +67,34 @@ class HomeScreenArrow extends StatelessWidget {
           ),
         )
       ],
+    );
+  }
+}
+
+class EmptyListDisplay2 extends StatelessWidget {
+  const EmptyListDisplay2({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Color appThemeColor =
+        Provider.of<ThemeNotifier>(context).theme.primaryColor;
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [Text('page 2')],
+    );
+  }
+}
+
+class EmptyListDisplay3 extends StatelessWidget {
+  const EmptyListDisplay3({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Color appThemeColor =
+        Provider.of<ThemeNotifier>(context).theme.primaryColor;
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [Text('page 3')],
     );
   }
 }
