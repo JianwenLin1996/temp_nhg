@@ -19,8 +19,15 @@ class ResetPasswordScreen extends StatefulWidget {
 
 class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  final TextEditingController userNameController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    emailController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     ThemeNotifier _theme = Provider.of<ThemeNotifier>(context);
@@ -35,7 +42,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
             children: [
               LoginInputField(
                   title: AppStrings.email,
-                  controller: userNameController,
+                  controller: emailController,
                   hintText: AppStrings.emailAddress),
               LoginButton(buttonText: AppStrings.sendNewPassword),
               DefaultSizedBox.vertical(40.h),
