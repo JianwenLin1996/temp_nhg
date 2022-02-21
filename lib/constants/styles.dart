@@ -19,12 +19,19 @@ class Styles {
 
   static const Color blackColor = Colors.black;
   static const Color whiteColor = Colors.white;
-  static const Color loginInputGrey = Color(0xFFF6F7F9);
-  static const Color loginInputBorderGrey = Color(0xFFD5D9DF);
 
-  // Login & ForgotPassword Screen
+  // Login & ForgotPassword screen
   static const Color lightGrey = Color(0xFFAFAFAF);
   static const Color appBarShadowGrey = Color(0xFF9F9F9F);
+  static const Color loginInput = Color(0xFFF6F7F9);
+
+  // Profile screen
+  static const Color profileInfoDark = Color(0xFF002251);
+  static const Color profileInfoGrey1 = Color(0xFF9195B2);
+  static const Color profileInfoGrey2 = Color(0xFFAAB2BE);
+  static const Color profileVerified = Color(0xFF089E1C);
+  static const Color profileClickable = Color(0xFF665EFF);
+  static const Color profileLogout = Color(0xFF919191);
 
   static const Color errorColor = Colors.red;
 
@@ -48,12 +55,15 @@ class CustomTextStyle extends TextStyle {
   final double fontSize;
   @override
   final String fontFamily;
+  @override
+  TextDecoration? decoration;
 
-  const CustomTextStyle({
+  CustomTextStyle({
     required this.color,
     required this.fontWeight,
     required this.fontSize,
     required this.fontFamily,
+    this.decoration,
   });
 
   CustomTextStyle.copyRightStyle({this.color = Styles.lightGrey})
@@ -65,14 +75,15 @@ class CustomTextStyle extends TextStyle {
   CustomTextStyle.pageTitleStyle({this.color = const Color(0xFF002251)})
       : fontFamily = 'SFProDisplay',
         fontWeight = Styles.boldText,
-        fontSize = 23.sp;
+        fontSize = 22.sp;
 
   CustomTextStyle.pageDescriptionStyle({this.color = const Color(0xFFAAB2BE)})
       : fontFamily = 'SFProDisplay',
         fontWeight = Styles.regularText,
         fontSize = 14.sp;
 
-  CustomTextStyle.loginInputTitleStyle({this.color = const Color(0xFF002251)})
+  CustomTextStyle.loginInputTitleStyle(
+      {this.color = const Color(0xFF002251), this.decoration = null})
       : fontFamily = 'SFProDisplay',
         fontWeight = Styles.mediumText,
         fontSize = 14.sp;
@@ -95,27 +106,9 @@ class CustomTextStyle extends TextStyle {
   //       fontSize = 10.sp,
   //       fontWeight = Styles.semiBoldText;
 
+  // Profile screen
+
   //
-
-  CustomTextStyle.titleDescription(
-      {this.color = Styles.blackColor, this.fontFamily = 'SFProText'})
-      : fontWeight = Styles.regularText,
-        fontSize = Styles.regularFontSize;
-
-  CustomTextStyle.appBarTitle(
-      {this.color = Styles.blackColor, this.fontFamily = 'SFProText'})
-      : fontWeight = Styles.boldText,
-        fontSize = Styles.titleFontSize;
-
-  CustomTextStyle.categoryTitle(
-      {this.color = Styles.blackColor, this.fontFamily = 'SFProText'})
-      : fontWeight = Styles.boldText,
-        fontSize = Styles.regularFontSize;
-
-  CustomTextStyle.hint(
-      {this.color = Styles.lightGrey, this.fontFamily = 'SFProText'})
-      : fontWeight = Styles.regularText,
-        fontSize = Styles.regularFontSize;
 
   CustomTextStyle.error(
       {this.color = Styles.errorColor, this.fontFamily = 'SFProText'})

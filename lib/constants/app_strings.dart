@@ -33,6 +33,12 @@ class AppStrings {
 
   // Profile screen
   static const String myProfile = 'My Profile';
+  static const String profilePhone = 'Phone number';
+  static const String profileEmail = 'Email address';
+  static const String profileIC = 'IC number';
+  static const String profileICVerification = 'IC verification';
+  static const String profilePassword = 'Password';
+  static const String changePassword = 'Change Password';
 
   // Bottom Navigation Item
   static const String itemList = 'Item List';

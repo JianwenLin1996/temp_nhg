@@ -12,6 +12,7 @@ class DefaultButton extends StatelessWidget {
   final Color? bgColor;
   final Color? textColor;
   final Color? borderColor;
+  final double? borderRadius;
 
   const DefaultButton({
     Key? key,
@@ -21,6 +22,7 @@ class DefaultButton extends StatelessWidget {
     this.bgColor,
     this.textColor,
     this.borderColor,
+    this.borderRadius,
   }) : super(key: key);
 
   @override
@@ -40,7 +42,8 @@ class DefaultButton extends StatelessWidget {
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                     side: BorderSide(color: borderColor ?? appThemeColor),
-                    borderRadius: BorderRadius.all(Radius.circular(12.r)),
+                    borderRadius:
+                        BorderRadius.all(Radius.circular(borderRadius ?? 12.r)),
                   ))),
               child: Padding(
                 padding: EdgeInsets.symmetric(vertical: 12.h),

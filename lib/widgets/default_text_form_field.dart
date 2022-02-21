@@ -39,7 +39,7 @@ class DefaultTextFormField extends StatelessWidget {
       validator: (val) => null,
       decoration: InputDecoration(
         filled: true,
-        fillColor: Styles.loginInputGrey,
+        fillColor: Styles.loginInput,
         hintText: hintText ?? '',
         helperText: null,
         errorStyle: TextStyle(
@@ -50,13 +50,13 @@ class DefaultTextFormField extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(12.r)),
             borderSide: BorderSide(
               width: 1.w,
-              color: Styles.loginInputBorderGrey,
+              color: Styles.loginInput,
             )),
         border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(20.r)),
             borderSide: BorderSide(
               width: 1.w,
-              color: Styles.loginInputBorderGrey,
+              color: Styles.loginInput,
             )),
         disabledBorder: OutlineInputBorder(
             borderSide: BorderSide(

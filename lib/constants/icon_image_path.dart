@@ -29,5 +29,6 @@ class AppIcons {
   static const String email = 'assets/icons/email.png';
   static const String icNumber = 'assets/icons/ic_number.png';
   static const String password = 'assets/icons/password.png';
-  static const String lock = 'assets/icons/lock.png';
+  static const String secure = 'assets/icons/secure.png';
+  static const String verified = 'assets/icons/verified.png';
 }
