@@ -17,9 +17,9 @@ class DefaultLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      AppImages.appLogoTrans,
-      width: width == null ? 240.w : width,
-      height: height == null ? 101.78.w : height,
+      AppImages.appLogo,
+      width: width == null ? 191.w : width,
+      height: height == null ? 81.h : height,
     );
   }
 }

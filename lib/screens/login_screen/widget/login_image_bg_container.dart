@@ -29,25 +29,27 @@ class LoginImageBGContainer extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                DefaultSizedBox.vertical(150.h),
+                DefaultSizedBox.vertical(72.h),
                 const DefaultLogo(),
-                DefaultSizedBox.vertical(20.h),
+                DefaultSizedBox.vertical(14.h),
                 Text(
                   AppStrings.welcome,
                   style: TextStyle(
                       color: Styles.whiteColor,
-                      fontSize: 50.sp,
-                      fontWeight: Styles.mediumText),
+                      fontFamily: 'SFProDisplay',
+                      fontSize: 35.sp,
+                      fontWeight: Styles.boldText),
                 ),
-                DefaultSizedBox.vertical(10.h),
                 Text(
                   AppStrings.appSlogan,
-                  style: CustomTextStyle.titleDescription(
-                      color: Styles.whiteColor),
+                  style: TextStyle(
+                    color: Styles.whiteColor,
+                    fontFamily: 'SFProDisplay',
+                    fontSize: 15.sp,
+                  ),
                 ),
-                DefaultSizedBox.vertical(80.h),
+                DefaultSizedBox.vertical(40.h),
                 child ?? Container(),
-                DefaultSizedBox.vertical(80.h),
               ],
             ),
           ),

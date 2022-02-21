@@ -30,7 +30,6 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
 
   @override
   Widget build(BuildContext context) {
-    ThemeNotifier _theme = Provider.of<ThemeNotifier>(context);
     return LoginImageBGContainer(
       child: LoginContainer(
         title: AppStrings.resetYoutPassword,
@@ -44,11 +43,13 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                   title: AppStrings.email,
                   controller: emailController,
                   hintText: AppStrings.emailAddress),
-              LoginButton(buttonText: AppStrings.sendNewPassword),
-              DefaultSizedBox.vertical(40.h),
-              LoginButton(
+              DefaultSizedBox.vertical(29.h),
+              const DefaultButton(buttonText: AppStrings.sendNewPassword),
+              DefaultSizedBox.vertical(16.h),
+              DefaultButton(
                 onPressed: () {
-                  Navigator.popAndPushNamed(context, RouteList.loginScreen);
+                  Navigator.pushReplacementNamed(
+                      context, RouteList.loginScreen);
                 },
                 buttonText: AppStrings.backToLogin,
                 bgColor: Styles.whiteColor,

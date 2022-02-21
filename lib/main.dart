@@ -32,7 +32,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(375, 812), // 20:9, my test device screen ratio
+      designSize: const Size(375, 812),
       builder: () => MaterialApp(
         // navigatorKey: Globals.navigatorKey, //for navigation service, cleaner code
         title: 'NHG Management System',

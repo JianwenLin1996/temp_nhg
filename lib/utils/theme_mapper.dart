@@ -16,7 +16,7 @@ class MyThemes {
 
   static final ThemeData workerTheme = basicTheme.copyWith(
     primaryColor: const Color(0xFF665EFF),
-    primaryColorLight: const Color(0xFF9B4BF9),
+    primaryColorLight: const Color(0xFF665EFF),
   );
   static ThemeData getThemeFromKey(MyThemeKeys themeKey) {
     switch (themeKey) {

@@ -27,12 +27,11 @@ class _LoginInputFieldState extends State<LoginInputField> {
       children: [
         Text(
           widget.title,
-          style: CustomTextStyle.categoryTitle(),
+          style: CustomTextStyle.loginInputTitleStyle(),
         ),
-        DefaultSizedBox.vertical(20.h),
+        DefaultSizedBox.vertical(16.h),
         DefaultTextFormField(
             controller: widget.controller, hintText: widget.hintText),
-        DefaultSizedBox.vertical(60.h),
       ],
     );
   }

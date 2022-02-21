@@ -20,29 +20,28 @@ class LoginContainer extends StatelessWidget {
     return child == null
         ? Container()
         : Padding(
-            padding: EdgeInsets.symmetric(horizontal: 48.w),
+            padding: EdgeInsets.symmetric(horizontal: 21.w),
             child: Container(
               width: double.infinity,
               decoration: BoxDecoration(
                   color: Styles.whiteColor,
-                  borderRadius: BorderRadius.circular(30.r)),
+                  borderRadius: BorderRadius.circular(20.r)),
               child: Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 32.w, vertical: 48.w),
+                  padding: EdgeInsets.only(
+                      top: 42.h, bottom: 31.h, left: 27.h, right: 27.w),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         title,
-                        style: CustomTextStyle.appBarTitle(),
+                        style: CustomTextStyle.pageTitleStyle(),
                       ),
-                      DefaultSizedBox.vertical(10.h),
+                      DefaultSizedBox.vertical(7.h),
                       Text(
                         description,
-                        style: CustomTextStyle.titleDescription(
-                            color: Styles.lightGrey),
+                        style: CustomTextStyle.pageDescriptionStyle(),
                       ),
-                      DefaultSizedBox.vertical(50.h),
+                      DefaultSizedBox.vertical(36.h),
                       child ?? Container(),
                     ],
                   )),

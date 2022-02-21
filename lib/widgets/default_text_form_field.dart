@@ -45,10 +45,9 @@ class DefaultTextFormField extends StatelessWidget {
         errorStyle: TextStyle(
           fontSize: Styles.smallerRegularFontSize,
         ),
-        hintStyle: hintTextStyle ??
-            CustomTextStyle.hint(color: Styles.loginInputBorderGrey),
+        hintStyle: hintTextStyle ?? CustomTextStyle.loginInputStyle(),
         enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(20.r)),
+            borderRadius: BorderRadius.all(Radius.circular(12.r)),
             borderSide: BorderSide(
               width: 1.w,
               color: Styles.loginInputBorderGrey,
@@ -85,12 +84,7 @@ class DefaultTextFormField extends StatelessWidget {
           minHeight: 2.h,
         ),
         suffixIcon: null,
-        contentPadding: EdgeInsets.fromLTRB(
-          20.w,
-          5.h,
-          20.w,
-          5.h,
-        ),
+        contentPadding: EdgeInsets.symmetric(horizontal: 19.w, vertical: 13.h),
         isDense: false,
       ),
     );

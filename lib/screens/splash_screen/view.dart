@@ -37,11 +37,15 @@ class _SplashScreenState extends State<SplashScreen> {
         color: Colors.white,
         child: Column(
           children: [
-            const Expanded(child: Center(child: DefaultLogo())),
+            Expanded(
+                child: Center(
+                    child: DefaultLogo(
+              width: 240.w,
+              height: 102.h,
+            ))),
             Text(
               AppStrings.copyRightMessage,
-              style:
-                  CustomTextStyle.copyRightDescription(color: Styles.lightGrey),
+              style: CustomTextStyle.copyRightStyle(color: Styles.lightGrey),
             ),
             DefaultSizedBox.vertical(21.h)
           ],
