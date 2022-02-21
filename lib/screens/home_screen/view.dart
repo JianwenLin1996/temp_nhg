@@ -11,7 +11,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   // For bottom navigator
-  final List<Widget> _pages = const [HomeAddList(), ProfileScreen()];
+  final List<Widget> _pages = const [HomeAddListScreen(), ProfileScreen()];
   late PageController _pageController;
   int _currentIndex = 0;
 

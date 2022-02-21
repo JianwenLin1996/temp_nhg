@@ -8,4 +8,5 @@ class RouteList {
   static const loginScreen = '/login';
   static const resetPasswordScreen = '/forgot_password';
   static const errorScreen = '/error';
+  static const notificationScreen = '/notification';
 }

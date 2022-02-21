@@ -4,18 +4,19 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nhg_layout/constants/app_strings.dart';
 import 'package:nhg_layout/constants/constants.dart';
 import 'package:nhg_layout/constants/icon_image_path.dart';
+import 'package:nhg_layout/routes/routes.dart';
 import 'package:nhg_layout/screens/home_screen/widget/empty_list_display.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
-class HomeAddList extends StatefulWidget {
-  const HomeAddList({Key? key}) : super(key: key);
+class HomeAddListScreen extends StatefulWidget {
+  const HomeAddListScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomeAddList> createState() => _HomeAddListState();
+  State<HomeAddListScreen> createState() => _HomeAddListScreenState();
 }
 
-class _HomeAddListState extends State<HomeAddList>
-    with AutomaticKeepAliveClientMixin<HomeAddList> {
+class _HomeAddListScreenState extends State<HomeAddListScreen>
+    with AutomaticKeepAliveClientMixin<HomeAddListScreen> {
   @override
   void initState() {
     // TODO: implement initState
@@ -46,14 +47,17 @@ class _HomeAddListState extends State<HomeAddList>
             ))
           ],
         ),
-        const DefaultAppBar(
+        DefaultAppBar(
           hasBackButton: false,
           titleText: AppStrings.myItem,
           actionIcons: [
             AppBarActionIcon(
+              onTap: () {
+                Navigator.pushNamed(context, RouteList.notificationScreen);
+              },
               path: AppIcons.featherBell,
             ),
-            AppBarActionIcon(
+            const AppBarActionIcon(
               path: AppIcons.refresh,
             )
           ],

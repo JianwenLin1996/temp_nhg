@@ -26,7 +26,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
       // Navigator.pushNamedAndRemoveUntil(
       //     context, RouteList.loginScreen, (route) => false);
-      Navigator.push(context, FadeRoute(page: const LoginScreen()));
+      Navigator.pushAndRemoveUntil(
+          context, FadeRoute(page: const LoginScreen()), (route) => false);
     });
   }
 

@@ -32,14 +32,14 @@ import 'package:nhg_layout/constants/constants.dart';
 class DefaultAppBar extends StatelessWidget {
   final String titleText;
   final bool hasBackButton;
+  final List<AppBarActionIcon> actionIcons;
   final Icon? backIcon;
-  final List<AppBarActionIcon>? actionIcons;
   const DefaultAppBar({
     Key? key,
     required this.titleText,
     required this.hasBackButton,
+    required this.actionIcons,
     this.backIcon,
-    this.actionIcons,
   }) : super(key: key);
 
   @override
@@ -50,27 +50,52 @@ class DefaultAppBar extends StatelessWidget {
         BoxShadow(color: Styles.appBarShadowGrey, blurRadius: 10)
       ]),
       child: Padding(
-        padding: EdgeInsets.only(left: 30.w, bottom: 7.h),
+        padding: EdgeInsets.only(
+            left: 30.w,
+            right: hasBackButton ? 30.w : 0,
+            bottom: hasBackButton ? 13.h : 7.h),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              titleText,
-              style: CustomTextStyle.largerAppBarTitle(),
-            ),
-            Row(
-              children: actionIcons as List<Widget>,
-            )
-            // const [
-            //   AppBarActionIcon(
-            //     path: AppIcons.featherBell,
-            //   ),
-            //   AppBarActionIcon(
-            //     path: AppIcons.refreah,
-            //   )
-            // ])
-          ],
+          children: hasBackButton
+              ? [
+                  InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: backIcon ?? const Icon(Icons.arrow_back_rounded)),
+                  Text(
+                    titleText,
+                    style: CustomTextStyle.mediumAppBarTitle(),
+                  ),
+                  Row(
+                    children: actionIcons.isEmpty
+                        ? [
+                            Icon(
+                              Icons.arrow_back,
+                              color: Colors.transparent,
+                            )
+                          ]
+                        : actionIcons as List<Widget>,
+                  )
+                ]
+              : [
+                  Text(
+                    titleText,
+                    style: CustomTextStyle.largerAppBarTitle(),
+                  ),
+                  Row(
+                    children: actionIcons as List<Widget>,
+                  )
+                  // const [
+                  //   AppBarActionIcon(
+                  //     path: AppIcons.featherBell,
+                  //   ),
+                  //   AppBarActionIcon(
+                  //     path: AppIcons.refreah,
+                  //   )
+                  // ])
+                ],
         ),
       ),
     );

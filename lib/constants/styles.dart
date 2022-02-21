@@ -101,6 +101,11 @@ class CustomTextStyle extends TextStyle {
         fontSize = 24.sp,
         fontWeight = Styles.boldText;
 
+  CustomTextStyle.mediumAppBarTitle({this.color = const Color(0xFF454F63)})
+      : fontFamily = 'SFProDisplay',
+        fontSize = 20.sp,
+        fontWeight = Styles.mediumText;
+
   // CustomTextStyle.navigatorItemTitle({this.color = const Color(0xFF665EFF)})
   //     : fontFamily = 'SFProText',
   //       fontSize = 10.sp,

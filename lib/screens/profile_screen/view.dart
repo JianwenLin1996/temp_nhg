@@ -6,6 +6,7 @@ import 'package:nhg_layout/constants/app_strings.dart';
 import 'package:nhg_layout/constants/constants.dart';
 import 'package:nhg_layout/constants/icon_image_path.dart';
 import 'package:nhg_layout/models/user.dart';
+import 'package:nhg_layout/routes/routes.dart';
 import 'package:nhg_layout/screens/home_screen/widget/empty_list_display.dart';
 import 'package:nhg_layout/screens/profile_screen/widget/widget.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
@@ -95,7 +96,10 @@ class _ProfileScreenState extends State<ProfileScreen>
                       ),
                       DefaultSizedBox.vertical(50.h),
                       DefaultButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.popAndPushNamed(
+                              context, RouteList.loginScreen);
+                        },
                         buttonText: 'Logout',
                         borderRadius: 26.r,
                         bgColor: Styles.whiteColor,
