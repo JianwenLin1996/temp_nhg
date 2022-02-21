@@ -20,12 +20,12 @@ class EmptyListDisplay extends StatelessWidget {
             width: 0.25.sw,
             child: Image.asset(
               AppIcons.emptyBox,
-              color: Styles.greyColor,
+              color: Styles.lightGrey,
             )),
         DefaultSizedBox.vertical(40.h),
         Text(
           'No any item yet.',
-          style: CustomTextStyle.titleDescription(color: Styles.greyColor),
+          style: CustomTextStyle.titleDescription(color: Styles.lightGrey),
         ),
         DefaultSizedBox.vertical(10.h),
         Text(
@@ -93,7 +93,7 @@ class EmptyListDisplay3 extends StatelessWidget {
     Color appThemeColor =
         Provider.of<ThemeNotifier>(context).theme.primaryColor;
     return Column(
-      mainAxisAlignment: MainAxisAlignment.end,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [Text('page 3')],
     );
   }

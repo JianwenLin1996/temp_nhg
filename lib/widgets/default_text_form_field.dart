@@ -62,7 +62,7 @@ class DefaultTextFormField extends StatelessWidget {
         disabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
           width: 1.w,
-          color: Styles.greyColor,
+          color: Styles.lightGrey,
         )),
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(20.r)),

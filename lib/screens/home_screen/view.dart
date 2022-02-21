@@ -15,11 +15,27 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int currentIndex = 0;
+  // For bottom navigator
+  final List<Widget> _pages = const [HomeAddList(), EmptyListDisplay3()];
+  late PageController _pageController;
+  int _currentIndex = 0;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _pageController = PageController();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _pageController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    Color appThemeColor =
-        Provider.of<ThemeNotifier>(context).theme.primaryColor;
     return Scaffold(
       bottomNavigationBar: null,
       appBar: DefaultAppBar(
@@ -31,13 +47,21 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
-      body: homeScreenMapper(currentIndex),
+      body: PageView(
+          physics: const NeverScrollableScrollPhysics(),
+          children: _pages,
+          controller: _pageController),
+      //  Consumer<HomeRouteNotifier>(
+      //     builder: (_, notifier, __) => homeScreenMapper(notifier.homeRoute)),
       bottomSheet: DefaultBottomNavigationBar(
         onTap: (index) {
           if (index != 1) {
+            // Provider.of<HomeRouteNotifier>(context, listen: false)
+            //     .changeHomeRoute(index);
             setState(() {
-              currentIndex = index;
+              _currentIndex = index;
             });
+            _pageController.jumpToPage(index);
           } else {
             // navigate to new page
           }

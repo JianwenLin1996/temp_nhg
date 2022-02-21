@@ -12,9 +12,6 @@ class HomeAddList extends StatefulWidget {
 
 class _HomeAddListState extends State<HomeAddList>
     with AutomaticKeepAliveClientMixin<HomeAddList> {
-  @override
-  bool get wantKeepAlive => true;
-
   int test = 1;
 
   @override
@@ -23,6 +20,8 @@ class _HomeAddListState extends State<HomeAddList>
     super.initState();
     print('why initiating again');
   }
+
+  bool get wantKeepAlive => true;
 
   @override
   Widget build(BuildContext context) {

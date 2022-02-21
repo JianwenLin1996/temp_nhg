@@ -40,7 +40,7 @@ class LoginContainer extends StatelessWidget {
                       Text(
                         description,
                         style: CustomTextStyle.titleDescription(
-                            color: Styles.greyColor),
+                            color: Styles.lightGrey),
                       ),
                       DefaultSizedBox.vertical(50.h),
                       child ?? Container(),

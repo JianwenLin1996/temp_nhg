@@ -4,7 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nhg_layout/constants/constants.dart';
 import 'package:nhg_layout/constants/styles.dart';
 import 'package:nhg_layout/routes/routes.dart';
+import 'package:nhg_layout/screens/login_screen/view.dart';
 import 'package:nhg_layout/widgets/default_sized_box.dart';
+import 'package:nhg_layout/widgets/fade_route.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -20,9 +22,11 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
     super.initState();
     WidgetsBinding.instance!.addPostFrameCallback((timeStamp) async {
-      await Future.delayed(const Duration(seconds: 3));
+      await Future.delayed(const Duration(seconds: 1));
+
       // Navigator.pushNamedAndRemoveUntil(
       //     context, RouteList.loginScreen, (route) => false);
+      Navigator.push(context, FadeRoute(page: const LoginScreen()));
     });
   }
 
@@ -36,9 +40,10 @@ class _SplashScreenState extends State<SplashScreen> {
             const Expanded(child: Center(child: DefaultLogo())),
             Text(
               AppStrings.copyRightMessage,
-              style: CustomTextStyle.titleDescription(color: Styles.greyColor),
+              style:
+                  CustomTextStyle.copyRightDescription(color: Styles.lightGrey),
             ),
-            DefaultSizedBox.vertical(25.h)
+            DefaultSizedBox.vertical(21.h)
           ],
         ),
       ),

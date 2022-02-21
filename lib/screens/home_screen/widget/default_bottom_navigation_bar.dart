@@ -20,7 +20,7 @@ class DefaultBottomNavigationBar extends StatelessWidget {
         onTap: onTap ?? (value) {},
         currentIndex: 0,
         selectedItemColor: Styles.blackColor,
-        unselectedItemColor: Styles.greyColor,
+        unselectedItemColor: Styles.lightGrey,
         items: [
           BottomNavigationItem(
               iconData: Icons.checklist_rounded,

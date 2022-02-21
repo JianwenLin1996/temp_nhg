@@ -10,6 +10,10 @@ class RouteGenerator {
         return MaterialPageRoute<String>(
             settings: const RouteSettings(name: RouteList.initialScreen),
             builder: (_) => const SplashScreen());
+      // case RouteList.loginScreen:
+      //   return MaterialPageRoute<String>(
+      //       settings: const RouteSettings(name: RouteList.loginScreen),
+      //       builder: (_) => const LoginScreen());
       case RouteList.loginScreen:
         return MaterialPageRoute<String>(
             settings: const RouteSettings(name: RouteList.loginScreen),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Styles {
+  // Splash screen
   static double fontSize10 = 13.sp;
   static double smallerRegularFontSize = 17.sp;
   static double regularFontSize = 21.sp;
@@ -17,7 +18,7 @@ class Styles {
 
   static const Color blackColor = Colors.black;
   static const Color whiteColor = Colors.white;
-  static const Color greyColor = Colors.grey;
+  static const Color lightGrey = Color(0xFFAFAFAF);
   static const Color loginInputGrey = Color(0xFFF6F7F9);
   static const Color loginInputBorderGrey = Color(0xFFD5D9DF);
 
@@ -35,43 +36,55 @@ class Styles {
 }
 
 class CustomTextStyle extends TextStyle {
+  @override
   final Color color;
+  @override
   final FontWeight fontWeight;
+  @override
   final double fontSize;
+  @override
+  final String fontFamily;
 
   const CustomTextStyle({
     required this.color,
     required this.fontWeight,
     required this.fontSize,
+    required this.fontFamily,
   });
 
-  CustomTextStyle.titleDescription({
+  CustomTextStyle.copyRightDescription({
     this.color = Styles.blackColor,
-  })  : fontWeight = Styles.regularText,
+  })  : fontFamily = 'SFProText',
+        fontWeight = FontWeight.w300,
+        fontSize = 11.sp;
+
+  CustomTextStyle.titleDescription(
+      {this.color = Styles.blackColor, this.fontFamily = 'SFProText'})
+      : fontWeight = Styles.regularText,
         fontSize = Styles.regularFontSize;
 
-  CustomTextStyle.appBarTitle({
-    this.color = Styles.blackColor,
-  })  : fontWeight = Styles.boldText,
+  CustomTextStyle.appBarTitle(
+      {this.color = Styles.blackColor, this.fontFamily = 'SFProText'})
+      : fontWeight = Styles.boldText,
         fontSize = Styles.titleFontSize;
 
-  CustomTextStyle.largerAppBarTitle({
-    this.color = Styles.blackColor,
-  })  : fontSize = Styles.largerTitleFontSize,
+  CustomTextStyle.largerAppBarTitle(
+      {this.color = Styles.blackColor, this.fontFamily = 'SFProText'})
+      : fontSize = Styles.largerTitleFontSize,
         fontWeight = Styles.boldAppBarTitleText;
 
-  CustomTextStyle.categoryTitle({
-    this.color = Styles.blackColor,
-  })  : fontWeight = Styles.boldText,
+  CustomTextStyle.categoryTitle(
+      {this.color = Styles.blackColor, this.fontFamily = 'SFProText'})
+      : fontWeight = Styles.boldText,
         fontSize = Styles.regularFontSize;
 
-  CustomTextStyle.hint({
-    this.color = Styles.greyColor,
-  })  : fontWeight = Styles.regularText,
+  CustomTextStyle.hint(
+      {this.color = Styles.lightGrey, this.fontFamily = 'SFProText'})
+      : fontWeight = Styles.regularText,
         fontSize = Styles.regularFontSize;
 
-  CustomTextStyle.error({
-    this.color = Styles.errorColor,
-  })  : fontWeight = Styles.boldText,
+  CustomTextStyle.error(
+      {this.color = Styles.errorColor, this.fontFamily = 'SFProText'})
+      : fontWeight = Styles.boldText,
         fontSize = Styles.regularFontSize;
 }

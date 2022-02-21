@@ -46,7 +46,7 @@ class AppBarActionIcon extends StatelessWidget {
         padding: const EdgeInsets.only(right: 10.0),
         child: Icon(
           icon,
-          color: Styles.greyColor,
+          color: Styles.lightGrey,
           size: 40.sp,
         ),
       ),
