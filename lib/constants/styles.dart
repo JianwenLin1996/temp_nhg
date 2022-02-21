@@ -24,6 +24,7 @@ class Styles {
 
   // Login & ForgotPassword Screen
   static const Color lightGrey = Color(0xFFAFAFAF);
+  static const Color appBarShadowGrey = Color(0xFF9F9F9F);
 
   static const Color errorColor = Colors.red;
 
@@ -76,10 +77,23 @@ class CustomTextStyle extends TextStyle {
         fontWeight = Styles.mediumText,
         fontSize = 14.sp;
 
-  CustomTextStyle.loginInputStyle({this.color = const Color(0xFFC9CED6)})
+  CustomTextStyle.generalInputStyle(
+      {this.color = const Color(0xFFC9CED6)}) // color for login hint text
       : fontFamily = 'SFProDisplay',
         fontWeight = Styles.regularText,
         fontSize = 16.sp;
+
+  // Home screen
+
+  CustomTextStyle.largerAppBarTitle({this.color = const Color(0xFF454F63)})
+      : fontFamily = 'SFProDisplay',
+        fontSize = 24.sp,
+        fontWeight = Styles.boldText;
+
+  // CustomTextStyle.navigatorItemTitle({this.color = const Color(0xFF665EFF)})
+  //     : fontFamily = 'SFProText',
+  //       fontSize = 10.sp,
+  //       fontWeight = Styles.semiBoldText;
 
   //
 
@@ -92,11 +106,6 @@ class CustomTextStyle extends TextStyle {
       {this.color = Styles.blackColor, this.fontFamily = 'SFProText'})
       : fontWeight = Styles.boldText,
         fontSize = Styles.titleFontSize;
-
-  CustomTextStyle.largerAppBarTitle(
-      {this.color = Styles.blackColor, this.fontFamily = 'SFProText'})
-      : fontSize = Styles.largerTitleFontSize,
-        fontWeight = Styles.semiBoldText;
 
   CustomTextStyle.categoryTitle(
       {this.color = Styles.blackColor, this.fontFamily = 'SFProText'})

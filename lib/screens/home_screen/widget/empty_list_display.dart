@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nhg_layout/constants/constants.dart';
+import 'package:nhg_layout/constants/icon_image_path.dart';
 import 'package:nhg_layout/providers/providers.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 import 'package:provider/provider.dart';
@@ -17,22 +18,23 @@ class EmptyListDisplay extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         SizedBox(
-            width: 0.25.sw,
+            width: 68.w,
             child: Image.asset(
-              AppIcons.emptyBox,
+              AppImages.emptyBox,
               color: Styles.lightGrey,
             )),
-        DefaultSizedBox.vertical(40.h),
+        DefaultSizedBox.vertical(12.h),
         Text(
-          'No any item yet.',
-          style: CustomTextStyle.titleDescription(color: Styles.lightGrey),
+          AppStrings.noItem,
+          style:
+              CustomTextStyle.generalInputStyle(color: const Color(0xFFCED3DA)),
         ),
-        DefaultSizedBox.vertical(10.h),
+        DefaultSizedBox.vertical(4.h),
         Text(
-          'Start to create your item.',
-          style: CustomTextStyle.titleDescription(color: appThemeColor),
+          AppStrings.createItem,
+          style: CustomTextStyle.generalInputStyle(color: appThemeColor),
         ),
-        DefaultSizedBox.vertical(40.h),
+        DefaultSizedBox.vertical(4.h),
         const HomeScreenArrow(),
         DefaultSizedBox.vertical(80.h),
       ],

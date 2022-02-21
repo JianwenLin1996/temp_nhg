@@ -54,7 +54,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     controller: passwordController,
                     hintText: AppStrings.enterPassword),
                 DefaultSizedBox.vertical(29.h),
-                const DefaultButton(buttonText: AppStrings.login),
+                DefaultButton(
+                    onPressed: () {
+                      Navigator.popAndPushNamed(context, RouteList.homeScreen);
+                    },
+                    buttonText: AppStrings.login),
                 DefaultSizedBox.vertical(30.h),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   InkWell(

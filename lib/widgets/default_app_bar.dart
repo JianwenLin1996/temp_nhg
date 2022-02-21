@@ -3,38 +3,86 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:nhg_layout/constants/constants.dart';
 
-class DefaultAppBar extends AppBar {
+// class DefaultAppBar extends AppBar {
+//   final String titleText;
+//   final bool hasBackButton;
+//   final Icon? backIcon;
+//   final List<Widget>? actionIcons;
+//   DefaultAppBar({
+//     Key? key,
+//     required this.titleText,
+//     this.hasBackButton = false,
+//     this.backIcon,
+//     this.actionIcons,
+//   }) : super(
+//           key: key,
+//           title: Text(titleText,
+//               style: hasBackButton
+//                   ? CustomTextStyle.appBarTitle()
+//                   : CustomTextStyle.largerAppBarTitle()),
+//           actions: actionIcons,
+//           backgroundColor: Styles.whiteColor,
+//           shadowColor: Styles.appBarShadowGrey,
+//           elevation: 1,
+//           automaticallyImplyLeading: hasBackButton,
+//           leading: backIcon,
+//         );
+// }
+
+class DefaultAppBar extends StatelessWidget {
   final String titleText;
   final bool hasBackButton;
   final Icon? backIcon;
-  final List<Widget>? actionIcons;
-  DefaultAppBar({
+  final List<AppBarActionIcon>? actionIcons;
+  const DefaultAppBar({
     Key? key,
     required this.titleText,
-    this.hasBackButton = false,
+    required this.hasBackButton,
     this.backIcon,
     this.actionIcons,
-  }) : super(
-          key: key,
-          title: Text(titleText,
-              style: hasBackButton
-                  ? CustomTextStyle.appBarTitle()
-                  : CustomTextStyle.largerAppBarTitle()),
-          actions: actionIcons,
-          backgroundColor: Styles.whiteColor,
-          shadowColor: Colors.grey.withOpacity(0.2),
-          elevation: 1,
-          automaticallyImplyLeading: hasBackButton,
-          leading: backIcon,
-        );
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 88.h,
+      decoration: const BoxDecoration(color: Styles.whiteColor, boxShadow: [
+        BoxShadow(color: Styles.appBarShadowGrey, blurRadius: 10)
+      ]),
+      child: Padding(
+        padding: EdgeInsets.only(left: 30.w, bottom: 7.h),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              titleText,
+              style: CustomTextStyle.largerAppBarTitle(),
+            ),
+            Row(
+              children: actionIcons as List<Widget>,
+            )
+            // const [
+            //   AppBarActionIcon(
+            //     path: AppIcons.featherBell,
+            //   ),
+            //   AppBarActionIcon(
+            //     path: AppIcons.refreah,
+            //   )
+            // ])
+          ],
+        ),
+      ),
+    );
+  }
 }
 
 class AppBarActionIcon extends StatelessWidget {
-  final IconData icon;
+  final String path;
   final Function()? onTap;
   const AppBarActionIcon({
     Key? key,
-    required this.icon,
+    required this.path,
     this.onTap,
   }) : super(key: key);
 
@@ -43,11 +91,11 @@ class AppBarActionIcon extends StatelessWidget {
     return InkWell(
       onTap: onTap ?? () {},
       child: Padding(
-        padding: const EdgeInsets.only(right: 10.0),
-        child: Icon(
-          icon,
+        padding: EdgeInsets.only(right: 17.w),
+        child: Image.asset(
+          path,
           color: Styles.lightGrey,
-          size: 40.sp,
+          width: 22.w,
         ),
       ),
     );

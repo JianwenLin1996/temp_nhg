@@ -28,6 +28,16 @@ class AppStrings {
 
   // Home screen
   static const String myItem = 'My Item';
+  static const String noItem = 'No any item yet.';
+  static const String createItem = 'Start to create your item.';
+
+  // Profile screen
+  static const String myProfile = 'My Profile';
+
+  // Bottom Navigation Item
+  static const String itemList = 'Item List';
+  static const String addNewItem = 'Add New Item';
+  static const String profile = 'Profile';
 
   // Input validation message
   static const String emptyInputError = 'Field is required';

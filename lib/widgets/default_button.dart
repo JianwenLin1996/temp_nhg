@@ -47,7 +47,7 @@ class DefaultButton extends StatelessWidget {
                 child: Text(
                   buttonText,
                   style: textStyle == null
-                      ? CustomTextStyle.loginInputStyle(
+                      ? CustomTextStyle.generalInputStyle(
                           color: textColor ?? Styles.whiteColor)
                       : null,
                 ),
