@@ -9,11 +9,17 @@ class DefaultTextFormField extends StatelessWidget {
   TextEditingController controller;
   String? hintText;
   TextStyle? hintTextStyle;
+  bool isLogin;
+  Color borderColor;
+  Color fillColor;
   DefaultTextFormField({
     Key? key,
     required this.controller,
     this.hintText,
     this.hintTextStyle,
+    this.isLogin = true,
+    this.borderColor = const Color(0xFFC9CED6),
+    this.fillColor = Colors.white,
   }) : super(key: key);
 
   @override
@@ -39,7 +45,7 @@ class DefaultTextFormField extends StatelessWidget {
       validator: (val) => null,
       decoration: InputDecoration(
         filled: true,
-        fillColor: Styles.loginInput,
+        fillColor: isLogin ? Styles.loginInput : fillColor,
         hintText: hintText ?? '',
         helperText: null,
         errorStyle: TextStyle(
@@ -50,13 +56,13 @@ class DefaultTextFormField extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(12.r)),
             borderSide: BorderSide(
               width: 1.w,
-              color: Styles.loginInput,
+              color: isLogin ? Styles.loginInput : borderColor,
             )),
         border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(20.r)),
             borderSide: BorderSide(
               width: 1.w,
-              color: Styles.loginInput,
+              color: isLogin ? Styles.loginInput : borderColor,
             )),
         disabledBorder: OutlineInputBorder(
             borderSide: BorderSide(

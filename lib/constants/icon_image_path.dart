@@ -54,4 +54,7 @@ class AppIcons {
   // Add New Item
   static const String delete = 'assets/icons/delete.png';
   static const String camera = 'assets/icons/camera.png';
+
+  // Dialog
+  static const String cancelRounded = 'assets/icons/cancel_rounded.png';
 }
