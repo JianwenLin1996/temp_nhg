@@ -79,7 +79,7 @@ class _AddNewItemDialogState extends State<AddNewItemDialog> {
                     ),
                     DefaultSizedBox.vertical(25.h),
                     Text(
-                      'Item',
+                      AppStrings.item,
                       style: CustomTextStyle.noDestinationStyle(),
                     ),
                     DefaultSizedBox.vertical(10.h),
@@ -95,7 +95,7 @@ class _AddNewItemDialogState extends State<AddNewItemDialog> {
                     ),
                     DefaultSizedBox.vertical(36.h),
                     Text(
-                      'Quantity',
+                      AppStrings.quantity,
                       style: CustomTextStyle.noDestinationStyle(),
                     ),
                     DefaultSizedBox.vertical(10.h),
@@ -108,7 +108,7 @@ class _AddNewItemDialogState extends State<AddNewItemDialog> {
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      buttonText: 'Add Item',
+                      buttonText: AppStrings.addItem,
                       borderColor: Styles.uploadImageBorderDark,
                     ),
                     DefaultSizedBox.vertical(37.h),

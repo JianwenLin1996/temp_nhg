@@ -5,11 +5,10 @@ import 'package:nhg_layout/constants/constants.dart';
 import 'package:nhg_layout/constants/icon_image_path.dart';
 import 'package:nhg_layout/constants/styles.dart';
 import 'package:nhg_layout/models/models.dart';
-import 'package:nhg_layout/providers/providers.dart';
-import 'package:nhg_layout/screens/add_new_item_screen/widget.dart/add_new_item_dialog.dart';
 import 'package:nhg_layout/screens/add_new_item_screen/widget.dart/delivery_location_section.dart';
 import 'package:nhg_layout/screens/add_new_item_screen/widget.dart/item_type_section.dart';
 import 'package:nhg_layout/screens/add_new_item_screen/widget.dart/upload_photo_section.dart';
+import 'package:nhg_layout/utils/utils.dart';
 
 import 'package:nhg_layout/widgets/widgets.dart';
 import 'package:provider/provider.dart';
@@ -79,12 +78,5 @@ class _AddNewItemScreenState extends State<AddNewItemScreen> {
             )
           ],
         ));
-  }
-
-  void onAddNewItemPressed(BuildContext context) async {
-    showDialog(
-        context: context,
-        barrierDismissible: false,
-        builder: (context) => AddNewItemDialog());
   }
 }

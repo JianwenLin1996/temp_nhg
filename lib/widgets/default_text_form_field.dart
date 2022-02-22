@@ -13,6 +13,7 @@ class DefaultTextFormField extends StatelessWidget {
   Color borderColor;
   Color fillColor;
   double? borderRadius;
+  int? line;
   DefaultTextFormField(
       {Key? key,
       required this.controller,
@@ -21,7 +22,8 @@ class DefaultTextFormField extends StatelessWidget {
       this.isLogin = true,
       this.borderColor = const Color(0xFFC9CED6),
       this.fillColor = Styles.whiteColor,
-      this.borderRadius})
+      this.borderRadius,
+      this.line = 1})
       : super(key: key);
 
   @override
@@ -29,8 +31,8 @@ class DefaultTextFormField extends StatelessWidget {
     return TextFormField(
       controller: controller,
       obscureText: false,
-      minLines: 1,
-      maxLines: 1,
+      minLines: line,
+      maxLines: line,
       enabled: true,
       textInputAction: TextInputAction.done,
       autovalidateMode: AutovalidateMode.onUserInteraction,

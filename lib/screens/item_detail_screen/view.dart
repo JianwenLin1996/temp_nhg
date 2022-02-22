@@ -5,6 +5,7 @@ import 'package:nhg_layout/screens/item_detail_screen/widget.dart/item_photo_sec
 import 'package:nhg_layout/screens/item_detail_screen/widget.dart/item_primary_detail_section.dart';
 import 'package:nhg_layout/screens/item_detail_screen/widget.dart/item_secondary_detail_section.dart';
 import 'package:nhg_layout/screens/item_detail_screen/widget.dart/upload_do_section.dart';
+import 'package:nhg_layout/utils/open_dialog_utils.dart';
 import 'package:provider/provider.dart';
 
 import 'package:nhg_layout/constants/app_strings.dart';
@@ -78,12 +79,14 @@ class _ItemDetailScreenState extends State<ItemDetailScreen> {
                                   padding: EdgeInsets.symmetric(
                                       horizontal: 28.w, vertical: 25.h),
                                   child: DefaultButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        onCollectedBackPressed(context);
+                                      },
                                       textStyle:
                                           CustomTextStyle.greenButtonStyle(),
                                       verticalPadding: 20.h,
-                                      bgColor: Color(0xFF63B90C),
-                                      borderColor: Color(0XFF305D02),
+                                      bgColor: const Color(0xFF63B90C),
+                                      borderColor: const Color(0XFF305D02),
                                       buttonText: AppStrings.itemCollectedBack),
                                 )
                               ],

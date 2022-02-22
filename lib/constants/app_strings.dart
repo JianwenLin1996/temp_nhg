@@ -65,6 +65,9 @@ class AppStrings {
   static const String newLocation = 'New Location';
   static const String createItem = 'Create Item';
   static const String del = 'Del';
+  static const String addItem = 'Add Item';
+  static const String item = 'Item';
+  static const String quantity = 'Quantity';
 
   // New Location screen
   static const String companyName = 'Company Name';
@@ -81,7 +84,6 @@ class AppStrings {
 
   // Item detail
   static const String itemPhoto = 'Item Photo';
-  static const String item = 'Item';
   static const String contact = 'Contact';
   static const String uploadDO = 'Upload DO';
   static const String deliveryOrder = '- Delivery Order';
@@ -93,6 +95,16 @@ class AppStrings {
   static const String collectedBy = 'Collected By';
   static const String remark = 'Remark';
   static const String status = 'Status';
+
+  // Complete Collection dialog
+  static const String collectedStatus = 'Collected Status';
+  static const String itemCollect = 'Item Collect';
+  static const String selectItem = 'Select Item';
+  static const String enterQuantity = 'Enter Quantity';
+  static const String collected = 'Collected';
+  static const String completedCollection = 'Completed Collection';
+  static const String clickCompleteMessage =
+      'If your item have finish collected,\nClick the below button to complete.';
 
   // Input validation message
   static const String emptyInputError = 'Field is required';
