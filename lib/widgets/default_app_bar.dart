@@ -33,7 +33,7 @@ class DefaultAppBar extends StatelessWidget {
   final String titleText;
   final bool hasBackButton;
   final List<AppBarActionIcon> actionIcons;
-  final Icon? backIcon;
+  final String? backIcon;
   const DefaultAppBar({
     Key? key,
     required this.titleText,
@@ -63,7 +63,10 @@ class DefaultAppBar extends StatelessWidget {
                       onTap: () {
                         Navigator.pop(context);
                       },
-                      child: backIcon ?? const Icon(Icons.arrow_back_rounded)),
+                      child: Image.asset(
+                        backIcon ?? AppIcons.back,
+                        width: 24.w,
+                      )),
                   Text(
                     titleText,
                     style: CustomTextStyle.mediumAppBarTitle(),

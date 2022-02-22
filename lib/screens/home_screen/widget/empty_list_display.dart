@@ -31,7 +31,7 @@ class EmptyListDisplay extends StatelessWidget {
         ),
         DefaultSizedBox.vertical(4.h),
         Text(
-          AppStrings.createItem,
+          AppStrings.startCreateItem,
           style: CustomTextStyle.generalInputStyle(color: appThemeColor),
         ),
         DefaultSizedBox.vertical(4.h),

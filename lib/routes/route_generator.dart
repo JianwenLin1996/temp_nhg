@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nhg_layout/routes/route_list.dart';
+import 'package:nhg_layout/screens/add_new_item_screen/view.dart';
+import 'package:nhg_layout/screens/history_screen/view.dart';
 import 'package:nhg_layout/screens/notification_screen/view.dart';
 import 'package:nhg_layout/screens/screens.dart';
 
@@ -31,6 +33,14 @@ class RouteGenerator {
         return MaterialPageRoute<String>(
             settings: const RouteSettings(name: RouteList.notificationScreen),
             builder: (_) => const NotificationScreen());
+      case RouteList.historyScreen:
+        return MaterialPageRoute<String>(
+            settings: const RouteSettings(name: RouteList.historyScreen),
+            builder: (_) => const HistoryScreen());
+      case RouteList.addNewItemScreen:
+        return MaterialPageRoute<String>(
+            settings: const RouteSettings(name: RouteList.addNewItemScreen),
+            builder: (_) => const AddNewItemScreen());
       case RouteList.errorScreen:
         return MaterialPageRoute<String>(
             settings: const RouteSettings(name: RouteList.errorScreen),

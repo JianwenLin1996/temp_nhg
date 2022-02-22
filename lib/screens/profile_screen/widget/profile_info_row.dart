@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:nhg_layout/constants/constants.dart';
+import 'package:nhg_layout/providers/providers.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
+import 'package:provider/provider.dart';
 
 class ProfileInfoRow extends StatelessWidget {
   final String iconPath;
@@ -23,6 +25,8 @@ class ProfileInfoRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Color appThemeColor =
+        Provider.of<ThemeNotifier>(context).theme.primaryColor;
     return Column(
       children: [
         Row(
@@ -55,7 +59,7 @@ class ProfileInfoRow extends StatelessWidget {
                         onTap: onTap ?? () {},
                         child: Text(AppStrings.changePassword,
                             style: CustomTextStyle.loginInputTitleStyle(
-                              color: Styles.profileClickable,
+                              color: appThemeColor,
                               decoration: TextDecoration.underline,
                             )),
                       )

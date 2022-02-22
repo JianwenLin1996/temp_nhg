@@ -30,7 +30,7 @@ class Styles {
   static const Color profileInfoGrey1 = Color(0xFF9195B2);
   static const Color profileInfoGrey2 = Color(0xFFAAB2BE);
   static const Color profileVerified = Color(0xFF089E1C);
-  static const Color profileClickable = Color(0xFF665EFF);
+  static const Color profileClickable = Color(0xFF665EFF); // Theme color
   static const Color profileLogout = Color(0xFF919191);
 
   // Notification screen
@@ -41,17 +41,14 @@ class Styles {
   static const Color statusCollected = Color(0xFFCBCBCB);
   static const Color itemCategory = Color(0xFF78849E);
 
-  static const Color errorColor = Colors.red;
+  // Add New Item screen
+  static const Color uploadImageBorderDark = Color(0xFF140E7D);
+  static const Color delete = Color(0xFFD90202);
 
   static const List<Color> emptyBackgroundColor = [
     Styles.whiteColor,
     Color(0xFFF7F7FA)
   ];
-
-  //No need primary color since its in provider already
-  // static const primaryColor1 = Color(0xFF665EFF);
-  // static const primaryColor1Light = Color(0xFF9B4BF9);
-
 }
 
 class CustomTextStyle extends TextStyle {
@@ -100,7 +97,7 @@ class CustomTextStyle extends TextStyle {
       {this.color = const Color(0xFFC9CED6)}) // color for login hint text
       : fontFamily = 'SFProDisplay',
         fontWeight = Styles.regularText,
-        fontSize = 16.sp;
+        fontSize = 16.sp; // add new item dropdown
 
   // Home screen
 
@@ -113,11 +110,6 @@ class CustomTextStyle extends TextStyle {
       : fontFamily = 'SFProDisplay',
         fontSize = 20.sp,
         fontWeight = Styles.mediumText;
-
-  // CustomTextStyle.navigatorItemTitle({this.color = const Color(0xFF665EFF)})
-  //     : fontFamily = 'SFProText',
-  //       fontSize = 10.sp,
-  //       fontWeight = Styles.semiBoldText;
 
   // Profile screen
 
@@ -133,7 +125,7 @@ class CustomTextStyle extends TextStyle {
       {this.color = Styles.notificationCategoryDark})
       : fontFamily = 'SFProText',
         fontWeight = Styles.mediumText,
-        fontSize = 13.sp;
+        fontSize = 13.sp; // add new item sub category // del
 
   CustomTextStyle.notificationMessageStyle(
       {this.color = Styles.notificationCategoryDark})
@@ -156,16 +148,28 @@ class CustomTextStyle extends TextStyle {
   CustomTextStyle.itemDescriptionStyle({this.color = Styles.profileInfoDark})
       : fontFamily = 'SFProDisplay',
         fontWeight = Styles.mediumText,
-        fontSize = 14.sp;
+        fontSize = 14.sp; // upload photo
 
   CustomTextStyle.itemStatusStyle({this.color = Styles.whiteColor})
       : fontFamily = 'SFProDisplay',
         fontWeight = Styles.semiBoldText,
-        fontSize = 15.sp;
-  //
+        fontSize = 15.sp; // add new item category
 
+  // Add New Item screen
+
+  CustomTextStyle.addNewStyle(
+      {this.color = Styles.whiteColor, this.decoration = null})
+      : fontFamily = 'SFProText',
+        fontWeight = Styles.semiBoldText,
+        fontSize = 15.sp; // add new item
+
+  CustomTextStyle.noDestinationStyle({this.color = Styles.blackColor})
+      : fontFamily = 'SFProText',
+        fontWeight = Styles.regularText,
+        fontSize = 13.sp;
+//
   CustomTextStyle.error(
-      {this.color = Styles.errorColor, this.fontFamily = 'SFProText'})
+      {this.color = Styles.delete, this.fontFamily = 'SFProText'})
       : fontWeight = Styles.boldText,
         fontSize = Styles.regularFontSize;
 }

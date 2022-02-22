@@ -45,5 +45,13 @@ class AppIcons {
   // Item
   static const String date = 'assets/icons/date.png';
   static const String location = 'assets/icons/location.png';
-  static const String box = 'assets/icons/box.png';
+  static const String itemType = 'assets/icons/box.png';
+
+  // App bar
+  static const String back = 'assets/icons/back.png';
+  static const String cancel = 'assets/icons/cancel.png';
+
+  // Add New Item
+  static const String delete = 'assets/icons/delete.png';
+  static const String camera = 'assets/icons/camera.png';
 }

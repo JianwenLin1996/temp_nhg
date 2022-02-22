@@ -72,7 +72,7 @@ class DefaultTextFormField extends StatelessWidget {
         focusedErrorBorder: OutlineInputBorder(
             borderSide: BorderSide(
           width: 1.w,
-          color: Styles.errorColor,
+          color: Styles.delete,
         )),
         prefixIcon: null,
         prefixIconConstraints: BoxConstraints(

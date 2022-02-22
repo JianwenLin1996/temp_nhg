@@ -29,7 +29,7 @@ class AppStrings {
   // Home screen
   static const String myItem = 'My Item';
   static const String noItem = 'No any item yet.';
-  static const String createItem = 'Start to create your item.';
+  static const String startCreateItem = 'Start to create your item.';
 
   // Profile screen
   static const String myProfile = 'My Profile';
@@ -44,6 +44,27 @@ class AppStrings {
   static const String itemList = 'Item List';
   static const String addNewItem = 'Add New Item';
   static const String profile = 'Profile';
+
+  // Item screen
+  static const String itemId = 'Item ID';
+  static const String createDate = 'Create Date';
+  static const String location = 'Location';
+  static const String itemType = 'Item Type';
+  static const String closeDate = 'Close Date';
+
+  // History screen
+  static const String history = 'History';
+
+  // Add New Item screen
+  static const String addItemPhoto = 'Add Item Photo';
+  static const String uploadPhoto = 'Upload Photo';
+  static const String deliveryLocation = 'Delivery Location';
+  static const String selectLocation = 'Select Location';
+  static const String noDestination = 'No Destination For You ?';
+  static const String newAddress = 'New Location Address';
+  static const String newLocation = 'New Location';
+  static const String createItem = 'Create Item';
+  static const String del = 'Del';
 
   // Input validation message
   static const String emptyInputError = 'Field is required';

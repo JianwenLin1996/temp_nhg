@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nhg_layout/widgets/default_sized_box.dart';
 import 'package:provider/provider.dart';
 
 import 'package:nhg_layout/constants/constants.dart';
@@ -14,16 +15,16 @@ class DefaultButton extends StatelessWidget {
   final Color? borderColor;
   final double? borderRadius;
 
-  const DefaultButton({
-    Key? key,
-    this.onPressed,
-    required this.buttonText,
-    this.textStyle,
-    this.bgColor,
-    this.textColor,
-    this.borderColor,
-    this.borderRadius,
-  }) : super(key: key);
+  const DefaultButton(
+      {Key? key,
+      this.onPressed,
+      required this.buttonText,
+      this.textStyle,
+      this.bgColor,
+      this.textColor,
+      this.borderColor,
+      this.borderRadius})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +54,57 @@ class DefaultButton extends StatelessWidget {
                       ? CustomTextStyle.generalInputStyle(
                           color: textColor ?? Styles.whiteColor)
                       : null,
+                ),
+              )),
+        ),
+      ],
+    );
+  }
+}
+
+class UploadPhotoButton extends StatelessWidget {
+  final Function()? onPressed;
+  final double width;
+  const UploadPhotoButton({
+    Key? key,
+    this.onPressed,
+    required this.width,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Color appThemeColor =
+        Provider.of<ThemeNotifier>(context).theme.primaryColor;
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        SizedBox(
+          width: width,
+          child: ElevatedButton(
+              onPressed: onPressed ?? () {},
+              style: ButtonStyle(
+                  elevation: MaterialStateProperty.all(0),
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(appThemeColor),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                    side: const BorderSide(color: Styles.uploadImageBorderDark),
+                    borderRadius: BorderRadius.all(Radius.circular(30.r)),
+                  ))),
+              child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 12.h),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      AppIcons.camera,
+                      width: 17.w,
+                    ),
+                    DefaultSizedBox.horizontal(10.w),
+                    Text(AppStrings.uploadPhoto,
+                        style: CustomTextStyle.itemDescriptionStyle(
+                            color: Styles.whiteColor)),
+                  ],
                 ),
               )),
         ),

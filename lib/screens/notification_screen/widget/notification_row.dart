@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nhg_layout/constants/constants.dart';
-import 'package:nhg_layout/constants/icon_image_path.dart';
 
 import 'package:nhg_layout/models/models.dart';
-import 'package:nhg_layout/utils/datetime_difference_utils.dart';
+import 'package:nhg_layout/utils/utils.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
 class NotificationRow extends StatelessWidget {
@@ -62,7 +61,8 @@ class NotificationRow extends StatelessWidget {
                   ),
                   DefaultSizedBox.vertical(5.h),
                   Text(
-                    dateTimeDifferenceFormatter(item.notificationCreatedAt),
+                    DateFormatUtils.dateTimeDifferenceFormatter(
+                        item.notificationCreatedAt),
                     style: CustomTextStyle.notificationTimeStyle(),
                   )
                 ],

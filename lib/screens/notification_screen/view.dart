@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nhg_layout/constants/constants.dart';
 import 'package:nhg_layout/models/models.dart';
-import 'package:nhg_layout/screens/home_screen/widget/widget.dart';
 import 'package:nhg_layout/screens/notification_screen/widget/notification_row.dart';
-import 'package:nhg_layout/screens/profile_screen/view.dart';
-import 'package:nhg_layout/utils/datetime_difference_utils.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
 class NotificationScreen extends StatefulWidget {

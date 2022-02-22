@@ -1,30 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nhg_layout/constants/app_strings.dart';
 import 'package:nhg_layout/constants/constants.dart';
-import 'package:nhg_layout/constants/icon_image_path.dart';
 import 'package:nhg_layout/models/models.dart';
-import 'package:nhg_layout/routes/routes.dart';
-import 'package:nhg_layout/screens/home_screen/widget/empty_list_display.dart';
 import 'package:nhg_layout/screens/home_screen/widget/item_card.dart';
-import 'package:nhg_layout/utils/dateformat_utils.dart';
+import 'package:nhg_layout/screens/home_screen/widget/widget.dart';
+import 'package:nhg_layout/screens/profile_screen/view.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
-class HomeAddListScreen extends StatefulWidget {
-  const HomeAddListScreen({Key? key}) : super(key: key);
+class HistoryScreen extends StatefulWidget {
+  const HistoryScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomeAddListScreen> createState() => _HomeAddListScreenState();
+  _HistoryScreenState createState() => _HistoryScreenState();
 }
 
-class _HomeAddListScreenState extends State<HomeAddListScreen>
-    with AutomaticKeepAliveClientMixin<HomeAddListScreen> {
+class _HistoryScreenState extends State<HistoryScreen> {
   List<Item> itemList = [
     Item(
         id: '0001A',
-        status: ItemStatus(id: 0, label: 'Sent Out'),
+        status: ItemStatus(id: 1, label: 'Collected'),
         createdAt: DateTime.now().subtract(Duration(days: 3)),
+        closedAt: DateTime.now().subtract(Duration(days: 1)),
         location: 'TLG SOLUTIONS',
         image: AppImages.item01,
         typeList: [
@@ -33,26 +29,18 @@ class _HomeAddListScreenState extends State<HomeAddListScreen>
         ]),
     Item(
         id: '0002B',
-        status: ItemStatus(id: 0, label: 'Sent Out'),
+        status: ItemStatus(id: 1, label: 'Collected'),
         createdAt: DateTime.now().subtract(Duration(days: 16)),
+        closedAt: DateTime.now().subtract(Duration(days: 8)),
         location: 'TLG SOLUTIONS',
         image: AppImages.item02,
         typeList: [ItemType(id: 1, name: 'Iron Frame', amount: 50)]),
   ];
 
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
-
-  @override
-  bool get wantKeepAlive => true;
-
-  @override
   Widget build(BuildContext context) {
-    super.build(context);
-    return Stack(
+    return Scaffold(
+        body: Stack(
       children: [
         Column(
           children: [
@@ -76,25 +64,12 @@ class _HomeAddListScreenState extends State<HomeAddListScreen>
                     ))
           ],
         ),
-        DefaultAppBar(
-          hasBackButton: false,
-          titleText: AppStrings.myItem,
-          actionIcons: [
-            AppBarActionIcon(
-              onTap: () {
-                Navigator.pushNamed(context, RouteList.notificationScreen);
-              },
-              path: AppIcons.featherBell,
-            ),
-            AppBarActionIcon(
-              onTap: () {
-                Navigator.pushNamed(context, RouteList.historyScreen);
-              },
-              path: AppIcons.refresh,
-            )
-          ],
+        const DefaultAppBar(
+          hasBackButton: true,
+          titleText: AppStrings.history,
+          actionIcons: [],
         )
       ],
-    );
+    ));
   }
 }
