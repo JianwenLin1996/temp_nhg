@@ -113,11 +113,14 @@ class _ProfileScreenState extends State<ProfileScreen>
             ],
           ),
         ),
-        const DefaultAppBar(
+        DefaultAppBar(
           hasBackButton: false,
           titleText: AppStrings.myProfile,
           actionIcons: [
             AppBarActionIcon(
+              onTap: () {
+                Navigator.pushNamed(context, RouteList.notificationScreen);
+              },
               path: AppIcons.featherBell,
             ),
           ],
@@ -141,7 +144,10 @@ class ProfileUpperSection extends StatelessWidget {
       child: Column(
         children: [
           Stack(children: [
-            Image.asset(AppImages.avatar),
+            CircleAvatar(
+                backgroundColor: Colors.transparent,
+                radius: 45.w,
+                child: Image.asset(AppImages.avatar)),
             Positioned(
                 bottom: 0,
                 right: 0,

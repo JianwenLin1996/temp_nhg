@@ -71,7 +71,7 @@ class DefaultAppBar extends StatelessWidget {
                   Row(
                     children: actionIcons.isEmpty
                         ? [
-                            Icon(
+                            const Icon(
                               Icons.arrow_back,
                               color: Colors.transparent,
                             )

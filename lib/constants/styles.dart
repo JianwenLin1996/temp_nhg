@@ -33,6 +33,14 @@ class Styles {
   static const Color profileClickable = Color(0xFF665EFF);
   static const Color profileLogout = Color(0xFF919191);
 
+  // Notification screen
+  static const Color notificationCategoryDark = Color(0xFF151522);
+
+  // Item status
+  static const Color statusSentOut = Color(0xFFF3AE36);
+  static const Color statusCollected = Color(0xFFCBCBCB);
+  static const Color itemCategory = Color(0xFF78849E);
+
   static const Color errorColor = Colors.red;
 
   static const List<Color> emptyBackgroundColor = [
@@ -68,7 +76,7 @@ class CustomTextStyle extends TextStyle {
 
   CustomTextStyle.copyRightStyle({this.color = Styles.lightGrey})
       : fontFamily = 'SFProText',
-        fontWeight = FontWeight.w300,
+        fontWeight = Styles.lightText,
         fontSize = 11.sp;
 
   // Login & ForgotPassword screens
@@ -113,6 +121,47 @@ class CustomTextStyle extends TextStyle {
 
   // Profile screen
 
+  // Notification screen
+
+  CustomTextStyle.notificationCategoryStyle(
+      {this.color = Styles.notificationCategoryDark})
+      : fontFamily = 'SFProText',
+        fontWeight = Styles.regularText,
+        fontSize = 16.sp;
+
+  CustomTextStyle.notificationByStyle(
+      {this.color = Styles.notificationCategoryDark})
+      : fontFamily = 'SFProText',
+        fontWeight = Styles.mediumText,
+        fontSize = 13.sp;
+
+  CustomTextStyle.notificationMessageStyle(
+      {this.color = Styles.notificationCategoryDark})
+      : fontFamily = 'SFProText',
+        fontWeight = Styles.lightText,
+        fontSize = 13.sp;
+
+  CustomTextStyle.notificationTimeStyle(
+      {this.color = Styles.notificationCategoryDark})
+      : fontFamily = 'SFProText',
+        fontWeight = Styles.regularText,
+        fontSize = 8.sp;
+
+  // Item screen
+  CustomTextStyle.itemIdStyle({this.color = Styles.whiteColor})
+      : fontFamily = 'SFProDisplay',
+        fontWeight = Styles.regularText,
+        fontSize = 13.sp;
+
+  CustomTextStyle.itemDescriptionStyle({this.color = Styles.profileInfoDark})
+      : fontFamily = 'SFProDisplay',
+        fontWeight = Styles.mediumText,
+        fontSize = 14.sp;
+
+  CustomTextStyle.itemStatusStyle({this.color = Styles.whiteColor})
+      : fontFamily = 'SFProDisplay',
+        fontWeight = Styles.semiBoldText,
+        fontSize = 15.sp;
   //
 
   CustomTextStyle.error(

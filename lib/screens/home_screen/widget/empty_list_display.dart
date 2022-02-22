@@ -49,26 +49,28 @@ class HomeScreenArrow extends StatelessWidget {
   Widget build(BuildContext context) {
     Color appThemeColor =
         Provider.of<ThemeNotifier>(context).theme.primaryColor;
-    return Column(
-      children: [
-        Text(
-          '|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n',
-          style: TextStyle(
-              fontWeight: FontWeight.w900,
-              fontSize: Styles.titleFontSize,
-              color: appThemeColor),
-        ),
-        Transform.translate(
-          offset: Offset(0, -40.h),
-          child: RotatedBox(
-            quarterTurns: -1,
-            child: Icon(
-              Icons.arrow_back_ios_rounded,
-              color: appThemeColor,
-            ),
+    return Center(
+      child: Column(
+        children: [
+          Text(
+            '|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n',
+            style: TextStyle(
+                fontWeight: FontWeight.w900,
+                fontSize: Styles.titleFontSize,
+                color: appThemeColor),
           ),
-        )
-      ],
+          Transform.translate(
+            offset: Offset(0, -40.h),
+            child: RotatedBox(
+              quarterTurns: -1,
+              child: Icon(
+                Icons.arrow_back_ios_rounded,
+                color: appThemeColor,
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
