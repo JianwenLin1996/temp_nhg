@@ -36,10 +36,7 @@ class DefaultTextFormField extends StatelessWidget {
       inputFormatters: [],
       textAlign: TextAlign.left,
       textAlignVertical: TextAlignVertical.center,
-      style: TextStyle(
-        color: Styles.blackColor,
-        fontSize: Styles.regularFontSize,
-      ),
+      style: CustomTextStyle.generalInputStyle(color: Styles.blackColor),
       onChanged: (val) {},
       onFieldSubmitted: (val) {},
       validator: (val) => null,

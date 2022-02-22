@@ -166,7 +166,7 @@ class CustomTextStyle extends TextStyle {
   CustomTextStyle.noDestinationStyle({this.color = Styles.blackColor})
       : fontFamily = 'SFProText',
         fontWeight = Styles.regularText,
-        fontSize = 13.sp; // dialog category
+        fontSize = 13.sp; // dialog category // location category
 //
   CustomTextStyle.error(
       {this.color = Styles.delete, this.fontFamily = 'SFProText'})

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nhg_layout/constants/constants.dart';
 import 'package:nhg_layout/providers/providers.dart';
+import 'package:nhg_layout/routes/routes.dart';
 import 'package:nhg_layout/widgets/default_dropdown.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 import 'package:provider/provider.dart';
@@ -81,7 +82,9 @@ class DeliveryLocationSection extends StatelessWidget {
                     style: CustomTextStyle.noDestinationStyle(),
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, RouteList.newLocationScreen);
+                    },
                     child: Row(
                       children: [
                         Icon(

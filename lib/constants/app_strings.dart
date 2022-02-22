@@ -66,6 +66,19 @@ class AppStrings {
   static const String createItem = 'Create Item';
   static const String del = 'Del';
 
+  // New Location screen
+  static const String companyName = 'Company Name';
+  static const String companyAddress = 'Company Address';
+  static const String pic = 'Person In Charge';
+  static const String contactNumber = 'Contact Number';
+  static const String createLocation = 'Create Location';
+
+  // Change password
+  static const String oldPassword = 'Old Password';
+  static const String newPassword = 'New Password';
+  static const String confirmNewPassword = 'Confirm New Password';
+  static const String resetPassword = 'Reset Password';
+
   // Input validation message
   static const String emptyInputError = 'Field is required';
   static const String passwordNotSameError = 'Passwords are different';

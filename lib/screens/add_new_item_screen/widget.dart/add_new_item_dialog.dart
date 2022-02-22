@@ -37,6 +37,13 @@ class _AddNewItemDialogState extends State<AddNewItemDialog> {
   }
 
   @override
+  void dispose() {
+    // TODO: implement dispose
+    quantityController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Center(
       child: Padding(

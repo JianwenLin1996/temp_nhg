@@ -92,7 +92,10 @@ class _ProfileScreenState extends State<ProfileScreen>
                         infoTitle: AppStrings.password,
                         info: '',
                         clickable: true,
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pushNamed(
+                              context, RouteList.changePasswordScreen);
+                        },
                       ),
                       DefaultSizedBox.vertical(50.h),
                       DefaultButton(

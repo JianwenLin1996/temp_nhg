@@ -10,9 +10,7 @@ import 'package:nhg_layout/screens/add_new_item_screen/widget.dart/add_new_item_
 import 'package:nhg_layout/screens/add_new_item_screen/widget.dart/delivery_location_section.dart';
 import 'package:nhg_layout/screens/add_new_item_screen/widget.dart/item_type_section.dart';
 import 'package:nhg_layout/screens/add_new_item_screen/widget.dart/upload_photo_section.dart';
-import 'package:nhg_layout/screens/home_screen/widget/item_card.dart';
-import 'package:nhg_layout/screens/home_screen/widget/widget.dart';
-import 'package:nhg_layout/screens/profile_screen/view.dart';
+
 import 'package:nhg_layout/widgets/widgets.dart';
 import 'package:provider/provider.dart';
 
