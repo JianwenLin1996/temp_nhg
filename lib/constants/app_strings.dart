@@ -106,6 +106,10 @@ class AppStrings {
   static const String clickCompleteMessage =
       'If your item have finish collected,\nClick the below button to complete.';
 
+  // Successfully Complete dialog
+  static const String completed = 'Completed.';
+  static const String completeMessage = 'Your item have been collected.';
+
   // Input validation message
   static const String emptyInputError = 'Field is required';
   static const String passwordNotSameError = 'Passwords are different';

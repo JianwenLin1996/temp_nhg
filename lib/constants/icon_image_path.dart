@@ -15,6 +15,9 @@ class AppImages {
 
   // Item Detail
   static const String sampleDO = 'assets/images/sample_do.png';
+
+  // Completed
+  static const String completed = 'assets/images/completed.png';
 }
 
 class AppIcons {
