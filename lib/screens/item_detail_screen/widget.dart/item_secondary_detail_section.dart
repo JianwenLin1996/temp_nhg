@@ -8,9 +8,9 @@ import 'package:nhg_layout/screens/item_detail_screen/widget.dart/item_detail_ro
 import 'package:nhg_layout/utils/dateformat_utils.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
-class ItemPrimaryDetailSection extends StatelessWidget {
+class ItemSecondaryDetailSection extends StatelessWidget {
   final ItemDetail detail;
-  const ItemPrimaryDetailSection({
+  const ItemSecondaryDetailSection({
     Key? key,
     required this.detail,
   }) : super(key: key);
@@ -23,26 +23,28 @@ class ItemPrimaryDetailSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          ItemDetailRow(title: AppStrings.status, info: detail.status),
+          ItemDetailRow(title: AppStrings.sentBy, info: detail.sentBy),
           ItemDetailRow(
-            title: AppStrings.item,
-            info: detail.typeList,
+            title: AppStrings.collectedItem,
+            info: detail.collectedList,
+            isNull: detail.collectedList == null,
           ),
           ItemDetailRow(
-              title: AppStrings.createDate,
-              info: DateFormatUtils.ddMMMyyyFormat1(context, detail.createdAt)),
-          ItemDetailRow(title: AppStrings.location, info: detail.location),
-          ItemDetailRow(title: AppStrings.pic, info: detail.personInCharge),
-          ItemDetailRow(title: AppStrings.contact, info: detail.contact),
-          ItemDetailRow(
-            title: AppStrings.deliveryOrder,
-            info: detail.deliveryOrder?.image,
-            isNull: detail.deliveryOrder == null,
-            isImage: true,
+            title: AppStrings.completeDate,
+            info: DateFormatUtils.ddMMMyyyFormat1(
+                context, detail.closedAt ?? DateTime.now()),
+            isNull: detail.closedAt == null,
           ),
           ItemDetailRow(
-            title: AppStrings.doNumber,
-            info: detail.deliveryOrder?.number ?? '',
-            isNull: detail.deliveryOrder == null,
+            title: AppStrings.collectedBy,
+            info: detail.collectedBy ?? '',
+            isNull: detail.collectedBy == null,
+          ),
+          ItemDetailRow(
+            title: AppStrings.remark,
+            info: detail.remark ?? '',
+            isNull: detail.remark == null,
           ),
         ],
       ),

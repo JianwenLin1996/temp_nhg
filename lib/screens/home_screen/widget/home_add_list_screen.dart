@@ -27,6 +27,7 @@ class _HomeAddListScreenState extends State<HomeAddListScreen>
         status: ItemStatus(id: 0, label: 'Sent Out'),
         createdAt: DateTime.now().subtract(Duration(days: 3)),
         personInCharge: 'Su Xiaolian',
+        sentBy: 'Bailey Tan',
         contact: '012-3322512',
         location: ItemDeliveryLocation(
             name: 'TLG SOLUTIONS',
@@ -44,6 +45,7 @@ class _HomeAddListScreenState extends State<HomeAddListScreen>
         status: ItemStatus(id: 0, label: 'Sent Out'),
         createdAt: DateTime.now().subtract(Duration(days: 16)),
         personInCharge: 'Su Xiaolian',
+        sentBy: 'Bailey Tan',
         contact: '012-3322512',
         location: ItemDeliveryLocation(
             name: 'TLG SOLUTIONS',

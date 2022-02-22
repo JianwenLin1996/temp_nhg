@@ -14,6 +14,7 @@ class DefaultButton extends StatelessWidget {
   final Color? textColor;
   final Color? borderColor;
   final double? borderRadius;
+  final double? verticalPadding;
 
   const DefaultButton(
       {Key? key,
@@ -23,7 +24,8 @@ class DefaultButton extends StatelessWidget {
       this.bgColor,
       this.textColor,
       this.borderColor,
-      this.borderRadius})
+      this.borderRadius,
+      this.verticalPadding})
       : super(key: key);
 
   @override
@@ -47,7 +49,8 @@ class DefaultButton extends StatelessWidget {
                         BorderRadius.all(Radius.circular(borderRadius ?? 12.r)),
                   ))),
               child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 12.h),
+                padding:
+                    EdgeInsets.symmetric(vertical: verticalPadding ?? 12.h),
                 child: Text(
                   buttonText,
                   style: textStyle == null

@@ -177,6 +177,11 @@ class CustomTextStyle extends TextStyle {
         fontWeight = Styles.mediumText,
         fontSize = 16.sp; // upload photo
 
+  CustomTextStyle.greenButtonStyle({this.color = Styles.whiteColor})
+      : fontFamily = 'SFProText',
+        fontWeight = Styles.mediumText,
+        fontSize = 16.sp;
+
   CustomTextStyle.error(
       {this.color = Styles.delete, this.fontFamily = 'SFProText'})
       : fontWeight = Styles.boldText,

@@ -20,8 +20,8 @@ class ItemDetail {
   DateTime? closedAt;
   List<ItemType>? collectedList;
   String? remark;
-  String? sentBy;
-  String? checkedBy;
+  String sentBy;
+  String? collectedBy;
 
   ItemDetail({
     required this.id,
@@ -32,12 +32,12 @@ class ItemDetail {
     required this.typeList,
     required this.personInCharge,
     required this.contact,
-    this.sentBy,
+    required this.sentBy,
     this.deliveryOrder,
     this.closedAt,
     this.collectedList,
     this.remark,
-    this.checkedBy,
+    this.collectedBy,
   });
 
   factory ItemDetail.fromJson(Map<String, dynamic> json) => ItemDetail(
@@ -50,7 +50,7 @@ class ItemDetail {
         contact: json['contact'],
         sentBy: json['sent_by'],
         deliveryOrder: json['delivery_order'],
-        checkedBy: json['checked_by'],
+        collectedBy: json['collected_by'],
         remark: json['remark'],
         imageList: List<String>.from(
             List<Map<String, dynamic>>.from(json['images'])

@@ -84,9 +84,15 @@ class AppStrings {
   static const String item = 'Item';
   static const String contact = 'Contact';
   static const String uploadDO = 'Upload DO';
-  static const String deliveryOrder = 'Delivery Order';
+  static const String deliveryOrder = '- Delivery Order';
   static const String doNumber = 'DO Number';
   static const String itemCollectedBack = 'Item Collected Back';
+  static const String sentBy = 'Sent By';
+  static const String collectedItem = 'Collected Item';
+  static const String completeDate = 'Complete Date';
+  static const String collectedBy = 'Collected By';
+  static const String remark = 'Remark';
+  static const String status = 'Status';
 
   // Input validation message
   static const String emptyInputError = 'Field is required';

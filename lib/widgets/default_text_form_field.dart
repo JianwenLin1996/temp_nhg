@@ -12,15 +12,17 @@ class DefaultTextFormField extends StatelessWidget {
   bool isLogin;
   Color borderColor;
   Color fillColor;
-  DefaultTextFormField({
-    Key? key,
-    required this.controller,
-    this.hintText,
-    this.hintTextStyle,
-    this.isLogin = true,
-    this.borderColor = const Color(0xFFC9CED6),
-    this.fillColor = Colors.white,
-  }) : super(key: key);
+  double? borderRadius;
+  DefaultTextFormField(
+      {Key? key,
+      required this.controller,
+      this.hintText,
+      this.hintTextStyle,
+      this.isLogin = true,
+      this.borderColor = const Color(0xFFC9CED6),
+      this.fillColor = Styles.whiteColor,
+      this.borderRadius})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -50,13 +52,15 @@ class DefaultTextFormField extends StatelessWidget {
         ),
         hintStyle: hintTextStyle ?? CustomTextStyle.generalInputStyle(),
         enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(12.r)),
+            borderRadius:
+                BorderRadius.all(Radius.circular(borderRadius ?? 12.r)),
             borderSide: BorderSide(
               width: 1.w,
               color: isLogin ? Styles.loginInput : borderColor,
             )),
         border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(20.r)),
+            borderRadius:
+                BorderRadius.all(Radius.circular(borderRadius ?? 12.r)),
             borderSide: BorderSide(
               width: 1.w,
               color: isLogin ? Styles.loginInput : borderColor,
@@ -67,7 +71,8 @@ class DefaultTextFormField extends StatelessWidget {
           color: Styles.lightGrey,
         )),
         focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(20.r)),
+            borderRadius:
+                BorderRadius.all(Radius.circular(borderRadius ?? 12.r)),
             borderSide: BorderSide(
               width: 2.w,
               color: Provider.of<ThemeNotifier>(context).theme.primaryColor,

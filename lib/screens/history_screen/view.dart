@@ -40,7 +40,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
         deliveryOrder:
             ItemDeliveryOrder(image: AppImages.sampleDO, number: 'AB12266'),
         sentBy: 'Bailey Tan',
-        checkedBy: 'Bailey Tan',
+        collectedBy: 'Bailey Tan',
         remark: 'Process is super duper smooth'),
     ItemDetail(
         id: '0002B',
@@ -60,7 +60,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
         deliveryOrder:
             ItemDeliveryOrder(image: AppImages.sampleDO, number: 'AB12258'),
         sentBy: 'Bailey Tan',
-        checkedBy: 'Bailey Tan',
+        collectedBy: 'Bailey Tan',
         remark: 'Everything is fine'),
   ];
 
