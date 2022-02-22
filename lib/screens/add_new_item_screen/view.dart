@@ -28,8 +28,6 @@ class _AddNewItemScreenState extends State<AddNewItemScreen> {
   ];
   @override
   Widget build(BuildContext context) {
-    Color appThemeColor =
-        Provider.of<ThemeNotifier>(context).theme.primaryColor;
     return Scaffold(
         resizeToAvoidBottomInset: true,
         body: Stack(

@@ -12,6 +12,9 @@ class AppImages {
   // Item
   static const String item01 = 'assets/images/item_image_01.png';
   static const String item02 = 'assets/images/item_image_02.png';
+
+  // Item Detail
+  static const String sampleDO = 'assets/images/sample_do.png';
 }
 
 class AppIcons {

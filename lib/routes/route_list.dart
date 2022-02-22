@@ -13,4 +13,5 @@ class RouteList {
   static const addNewItemScreen = '/add_new_item';
   static const newLocationScreen = '/new_location';
   static const changePasswordScreen = '/change_password';
+  static const itemDetailScreen = '/item_detail';
 }

@@ -79,6 +79,15 @@ class AppStrings {
   static const String confirmNewPassword = 'Confirm New Password';
   static const String resetPassword = 'Reset Password';
 
+  // Item detail
+  static const String itemPhoto = 'Item Photo';
+  static const String item = 'Item';
+  static const String contact = 'Contact';
+  static const String uploadDO = 'Upload DO';
+  static const String deliveryOrder = 'Delivery Order';
+  static const String doNumber = 'DO Number';
+  static const String itemCollectedBack = 'Item Collected Back';
+
   // Input validation message
   static const String emptyInputError = 'Field is required';
   static const String passwordNotSameError = 'Passwords are different';

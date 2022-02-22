@@ -45,6 +45,9 @@ class Styles {
   static const Color uploadImageBorderDark = Color(0xFF140E7D);
   static const Color delete = Color(0xFFD90202);
 
+  // Item Detail screen
+  static const Color collected = Color(0xFF63B90C);
+
   static const List<Color> emptyBackgroundColor = [
     Styles.whiteColor,
     Color(0xFFF7F7FA)
@@ -97,7 +100,7 @@ class CustomTextStyle extends TextStyle {
       {this.color = const Color(0xFFC9CED6)}) // color for login hint text
       : fontFamily = 'SFProDisplay',
         fontWeight = Styles.regularText,
-        fontSize = 16.sp; // add new item dropdown
+        fontSize = 16.sp; // add new item dropdown //
 
   // Home screen
 
@@ -167,7 +170,13 @@ class CustomTextStyle extends TextStyle {
       : fontFamily = 'SFProText',
         fontWeight = Styles.regularText,
         fontSize = 13.sp; // dialog category // location category
-//
+
+// Item Detail screen
+  CustomTextStyle.detailStatusStyle({this.color = Styles.collected})
+      : fontFamily = 'SFProDisplay',
+        fontWeight = Styles.mediumText,
+        fontSize = 16.sp; // upload photo
+
   CustomTextStyle.error(
       {this.color = Styles.delete, this.fontFamily = 'SFProText'})
       : fontWeight = Styles.boldText,

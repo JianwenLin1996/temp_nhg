@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nhg_layout/constants/constants.dart';
+import 'package:nhg_layout/models/item/item_delivery_location.dart';
 import 'package:nhg_layout/models/models.dart';
 import 'package:nhg_layout/screens/home_screen/widget/item_card.dart';
 import 'package:nhg_layout/screens/home_screen/widget/widget.dart';
@@ -15,26 +16,52 @@ class HistoryScreen extends StatefulWidget {
 }
 
 class _HistoryScreenState extends State<HistoryScreen> {
-  List<Item> itemList = [
-    Item(
+  List<ItemDetail> itemList = [
+    ItemDetail(
         id: '0001A',
         status: ItemStatus(id: 1, label: 'Collected'),
         createdAt: DateTime.now().subtract(Duration(days: 3)),
-        closedAt: DateTime.now().subtract(Duration(days: 1)),
-        location: 'TLG SOLUTIONS',
-        image: AppImages.item01,
+        personInCharge: 'Su Xiaolian',
+        contact: '012-3322512',
+        location: ItemDeliveryLocation(
+            name: 'TLG SOLUTIONS',
+            address:
+                'Jalan Subang 9, Taman Indah Subang Uep, 47630 Subang Jaya, Selangor'),
+        imageList: [AppImages.item01],
         typeList: [
           ItemType(id: 0, name: 'Wooden Frame', amount: 100),
           ItemType(id: 1, name: 'Iron Frame', amount: 50)
-        ]),
-    Item(
+        ],
+        collectedList: [
+          ItemType(id: 0, name: 'Wooden Frame', amount: 66),
+          ItemType(id: 1, name: 'Iron Frame', amount: 88)
+        ],
+        closedAt: DateTime.now().subtract(Duration(days: 1)),
+        deliveryOrder:
+            ItemDeliveryOrder(image: AppImages.sampleDO, number: 'AB12266'),
+        sentBy: 'Bailey Tan',
+        checkedBy: 'Bailey Tan',
+        remark: 'Process is super duper smooth'),
+    ItemDetail(
         id: '0002B',
         status: ItemStatus(id: 1, label: 'Collected'),
         createdAt: DateTime.now().subtract(Duration(days: 16)),
+        personInCharge: 'Su Xiaolian',
+        contact: '012-3322512',
+        location: ItemDeliveryLocation(
+            name: 'TLG SOLUTIONS',
+            address:
+                'Jalan Subang 9, Taman Indah Subang Uep, 47630 Subang Jaya, Selangor'),
+        imageList: [AppImages.item02],
+        typeList: [ItemType(id: 1, name: 'Iron Frame', amount: 50)],
+        //
+        collectedList: [ItemType(id: 1, name: 'Iron Frame', amount: 35)],
         closedAt: DateTime.now().subtract(Duration(days: 8)),
-        location: 'TLG SOLUTIONS',
-        image: AppImages.item02,
-        typeList: [ItemType(id: 1, name: 'Iron Frame', amount: 50)]),
+        deliveryOrder:
+            ItemDeliveryOrder(image: AppImages.sampleDO, number: 'AB12258'),
+        sentBy: 'Bailey Tan',
+        checkedBy: 'Bailey Tan',
+        remark: 'Everything is fine'),
   ];
 
   @override

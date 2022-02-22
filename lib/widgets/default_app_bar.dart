@@ -33,12 +33,14 @@ class DefaultAppBar extends StatelessWidget {
   final String titleText;
   final bool hasBackButton;
   final List<AppBarActionIcon> actionIcons;
+  final Widget? actionWidget;
   final String? backIcon;
   const DefaultAppBar({
     Key? key,
     required this.titleText,
     required this.hasBackButton,
     required this.actionIcons,
+    this.actionWidget,
     this.backIcon,
   }) : super(key: key);
 
@@ -72,14 +74,16 @@ class DefaultAppBar extends StatelessWidget {
                     style: CustomTextStyle.mediumAppBarTitle(),
                   ),
                   Row(
-                    children: actionIcons.isEmpty
+                    children: actionIcons.isEmpty && actionWidget == null
                         ? [
                             const Icon(
                               Icons.arrow_back,
                               color: Colors.transparent,
                             )
                           ]
-                        : actionIcons as List<Widget>,
+                        : actionWidget == null
+                            ? actionIcons as List<Widget>
+                            : [actionWidget!],
                   )
                 ]
               : [

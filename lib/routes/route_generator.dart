@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:nhg_layout/models/item/item.dart';
 import 'package:nhg_layout/routes/route_list.dart';
 import 'package:nhg_layout/screens/add_new_item_screen/view.dart';
 import 'package:nhg_layout/screens/change_password_screen.dart/view.dart';
 import 'package:nhg_layout/screens/history_screen/view.dart';
+import 'package:nhg_layout/screens/item_detail_screen/view.dart';
 import 'package:nhg_layout/screens/new_location_screen/view.dart';
 import 'package:nhg_layout/screens/notification_screen/view.dart';
 import 'package:nhg_layout/screens/screens.dart';
@@ -51,6 +53,12 @@ class RouteGenerator {
         return MaterialPageRoute<String>(
             settings: const RouteSettings(name: RouteList.changePasswordScreen),
             builder: (_) => const ChangePasswordScreen());
+      case RouteList.itemDetailScreen:
+        return MaterialPageRoute<String>(
+            settings: const RouteSettings(name: RouteList.itemDetailScreen),
+            builder: (_) => ItemDetailScreen(
+                  detail: args as ItemDetail,
+                ));
       case RouteList.errorScreen:
         return MaterialPageRoute<String>(
             settings: const RouteSettings(name: RouteList.errorScreen),

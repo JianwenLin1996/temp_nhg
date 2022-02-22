@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nhg_layout/constants/app_strings.dart';
 import 'package:nhg_layout/constants/constants.dart';
 import 'package:nhg_layout/constants/icon_image_path.dart';
+import 'package:nhg_layout/models/item/item_delivery_location.dart';
 import 'package:nhg_layout/models/models.dart';
 import 'package:nhg_layout/routes/routes.dart';
 import 'package:nhg_layout/screens/home_screen/widget/empty_list_display.dart';
@@ -20,24 +21,41 @@ class HomeAddListScreen extends StatefulWidget {
 
 class _HomeAddListScreenState extends State<HomeAddListScreen>
     with AutomaticKeepAliveClientMixin<HomeAddListScreen> {
-  List<Item> itemList = [
-    Item(
+  List<ItemDetail> itemList = [
+    ItemDetail(
         id: '0001A',
         status: ItemStatus(id: 0, label: 'Sent Out'),
         createdAt: DateTime.now().subtract(Duration(days: 3)),
-        location: 'TLG SOLUTIONS',
-        image: AppImages.item01,
+        personInCharge: 'Su Xiaolian',
+        contact: '012-3322512',
+        location: ItemDeliveryLocation(
+            name: 'TLG SOLUTIONS',
+            address:
+                'Jalan Subang 9, Taman Indah Subang Uep, 47630 Subang Jaya, Selangor'),
+        imageList: [
+          AppImages.item01
+        ],
         typeList: [
           ItemType(id: 0, name: 'Wooden Frame', amount: 100),
           ItemType(id: 1, name: 'Iron Frame', amount: 50)
         ]),
-    Item(
+    ItemDetail(
         id: '0002B',
         status: ItemStatus(id: 0, label: 'Sent Out'),
         createdAt: DateTime.now().subtract(Duration(days: 16)),
-        location: 'TLG SOLUTIONS',
-        image: AppImages.item02,
-        typeList: [ItemType(id: 1, name: 'Iron Frame', amount: 50)]),
+        personInCharge: 'Su Xiaolian',
+        contact: '012-3322512',
+        location: ItemDeliveryLocation(
+            name: 'TLG SOLUTIONS',
+            address:
+                'Jalan Subang 9, Taman Indah Subang Up, 47630 Subang Jaya, Selangor'),
+        imageList: [
+          AppImages.item02,
+          AppImages.item01,
+        ],
+        typeList: [
+          ItemType(id: 1, name: 'Iron Frame', amount: 50)
+        ]),
   ];
 
   @override

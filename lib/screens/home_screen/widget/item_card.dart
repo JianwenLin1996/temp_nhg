@@ -7,11 +7,12 @@ import 'package:nhg_layout/constants/styles.dart';
 import 'package:nhg_layout/models/item/item_status.dart';
 import 'package:nhg_layout/models/item/item_type.dart';
 import 'package:nhg_layout/models/models.dart';
+import 'package:nhg_layout/routes/routes.dart';
 import 'package:nhg_layout/utils/utils.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
 class ItemCard extends StatelessWidget {
-  final Item item;
+  final ItemDetail item;
   const ItemCard({
     Key? key,
     required this.item,
@@ -19,11 +20,17 @@ class ItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ItemCardStatusSection(id: item.id, status: item.status),
-        ItemCardInfoSection(item: item)
-      ],
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, RouteList.itemDetailScreen,
+            arguments: item);
+      },
+      child: Column(
+        children: [
+          ItemCardStatusSection(id: item.id, status: item.status),
+          ItemCardInfoSection(item: item)
+        ],
+      ),
     );
   }
 }
@@ -63,7 +70,7 @@ class ItemCardStatusSection extends StatelessWidget {
 }
 
 class ItemCardInfoSection extends StatelessWidget {
-  final Item item;
+  final ItemDetail item;
   const ItemCardInfoSection({
     Key? key,
     required this.item,
@@ -93,7 +100,7 @@ class ItemCardInfoSection extends StatelessWidget {
                   ? ItemCardRow(
                       iconPath: AppIcons.location,
                       infoCategory: AppStrings.location,
-                      normalInfo: item.location,
+                      normalInfo: item.location.name,
                     )
                   : ItemCardRow(
                       iconPath: AppIcons.date,
@@ -114,7 +121,7 @@ class ItemCardInfoSection extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(5.r))),
             child: Image.asset(
-              item.image,
+              item.imageList[0],
               fit: BoxFit.cover,
             ),
           )
