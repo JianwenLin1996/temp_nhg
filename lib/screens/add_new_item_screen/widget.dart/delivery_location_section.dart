@@ -25,8 +25,8 @@ class DeliveryLocationSection extends StatelessWidget {
             children: [
               Text(
                 AppStrings.location,
-                style:
-                    CustomTextStyle.itemStatusStyle(color: Styles.blackColor),
+                style: CustomTextStyle.itemStatusStyle(
+                    customColor: Styles.blackColor),
               ),
               DefaultSizedBox.vertical(25.h),
               Text(
@@ -64,7 +64,7 @@ class DeliveryLocationSection extends StatelessWidget {
 
               DefaultDropdown(
                 hintText: AppStrings.selectLocation,
-                onChanged: (int) {},
+                onChanged: (val) {},
                 itemList: const [
                   DropdownMenuItem(
                     child: Text('one'),
@@ -96,8 +96,8 @@ class DeliveryLocationSection extends StatelessWidget {
                         Text(
                           AppStrings.newLocation,
                           style: CustomTextStyle.addNewStyle(
-                            color: appThemeColor,
-                            decoration: TextDecoration.underline,
+                            customColor: appThemeColor,
+                            customDecoration: TextDecoration.underline,
                           ),
                         ),
                       ],
@@ -109,7 +109,7 @@ class DeliveryLocationSection extends StatelessWidget {
               Text(
                 AppStrings.newAddress,
                 style: CustomTextStyle.noDestinationStyle(
-                    color: Styles.profileInfoGrey2),
+                    customColor: Styles.profileInfoGrey2),
               ),
               DefaultSizedBox.vertical(25.h),
               DefaultButton(

@@ -3,10 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nhg_layout/constants/app_strings.dart';
 import 'package:nhg_layout/constants/constants.dart';
 import 'package:nhg_layout/constants/styles.dart';
-import 'package:nhg_layout/providers/providers.dart';
 import 'package:nhg_layout/screens/new_location_screen/widget.dart/input_field.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
-import 'package:provider/provider.dart';
 
 class ChangePasswordScreen extends StatefulWidget {
   const ChangePasswordScreen({Key? key}) : super(key: key);
@@ -22,7 +20,6 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     oldPasswordController.dispose();
     newPasswordController.dispose();
     confirmNewPasswordController.dispose();
@@ -31,8 +28,6 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Color appThemeColor =
-        Provider.of<ThemeNotifier>(context).theme.primaryColor;
     return Scaffold(
         resizeToAvoidBottomInset: true,
         body: Stack(

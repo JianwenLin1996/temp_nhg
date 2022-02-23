@@ -6,12 +6,10 @@ import 'package:nhg_layout/screens/item_detail_screen/widget.dart/item_primary_d
 import 'package:nhg_layout/screens/item_detail_screen/widget.dart/item_secondary_detail_section.dart';
 import 'package:nhg_layout/screens/item_detail_screen/widget.dart/upload_do_section.dart';
 import 'package:nhg_layout/utils/open_dialog_utils.dart';
-import 'package:provider/provider.dart';
 
 import 'package:nhg_layout/constants/app_strings.dart';
 import 'package:nhg_layout/constants/constants.dart';
 import 'package:nhg_layout/constants/styles.dart';
-import 'package:nhg_layout/providers/providers.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
 class ItemDetailScreen extends StatefulWidget {
@@ -28,8 +26,6 @@ class ItemDetailScreen extends StatefulWidget {
 class _ItemDetailScreenState extends State<ItemDetailScreen> {
   @override
   Widget build(BuildContext context) {
-    Color appThemeColor =
-        Provider.of<ThemeNotifier>(context).theme.primaryColor;
     TextEditingController doController = TextEditingController();
     return Scaffold(
         resizeToAvoidBottomInset: true,
@@ -100,7 +96,7 @@ class _ItemDetailScreenState extends State<ItemDetailScreen> {
             DefaultAppBar(
               hasBackButton: true,
               titleText: widget.detail.id,
-              actionIcons: [],
+              actionIcons: const [],
               actionWidget: widget.detail.status.id == 0
                   ? InkWell(
                       onTap: () {},

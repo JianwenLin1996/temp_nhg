@@ -4,11 +4,10 @@ import 'package:nhg_layout/constants/constants.dart';
 import 'package:nhg_layout/constants/icon_image_path.dart';
 import 'package:nhg_layout/models/item/item_type.dart';
 import 'package:nhg_layout/routes/route_list.dart';
-import 'package:nhg_layout/widgets/default_dropdown.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
 class CompletedDialog extends StatefulWidget {
-  CompletedDialog({
+  const CompletedDialog({
     Key? key,
   }) : super(key: key);
 
@@ -19,11 +18,11 @@ class CompletedDialog extends StatefulWidget {
 class _CompletedDialogState extends State<CompletedDialog> {
   List<DropdownMenuItem> itemTypeList = [
     DropdownMenuItem(
-      child: Text('Wooden Frame'),
+      child: const Text('Wooden Frame'),
       value: ItemType(id: 0, name: 'Wooden Frame', amount: 100),
     ),
     DropdownMenuItem(
-      child: Text('Iron Frame'),
+      child: const Text('Iron Frame'),
       value: ItemType(id: 1, name: 'Iron Frame', amount: 80),
     )
   ];
@@ -33,14 +32,12 @@ class _CompletedDialogState extends State<CompletedDialog> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     selectedItem = itemTypeList.first.value;
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
     quantityController.dispose();
     remarkController.dispose();
     super.dispose();

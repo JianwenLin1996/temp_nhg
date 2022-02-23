@@ -7,7 +7,7 @@ import 'package:nhg_layout/widgets/default_dropdown.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
 class AddNewItemDialog extends StatefulWidget {
-  AddNewItemDialog({
+  const AddNewItemDialog({
     Key? key,
   }) : super(key: key);
 
@@ -18,11 +18,11 @@ class AddNewItemDialog extends StatefulWidget {
 class _AddNewItemDialogState extends State<AddNewItemDialog> {
   List<DropdownMenuItem> itemList = [
     DropdownMenuItem(
-      child: Text('Wooden Frame'),
+      child: const Text('Wooden Frame'),
       value: ItemType(id: 0, name: 'Wooden Frame', amount: 0),
     ),
     DropdownMenuItem(
-      child: Text('Iron Frame'),
+      child: const Text('Iron Frame'),
       value: ItemType(id: 1, name: 'Iron Frame', amount: 0),
     )
   ];
@@ -31,14 +31,12 @@ class _AddNewItemDialogState extends State<AddNewItemDialog> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     selectedItem = itemList.first.value;
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
     quantityController.dispose();
     super.dispose();
   }

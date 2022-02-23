@@ -7,19 +7,19 @@ void onAddNewItemPressed(BuildContext context) async {
   showDialog(
       context: context,
       barrierDismissible: false,
-      builder: (context) => AddNewItemDialog());
+      builder: (context) => const AddNewItemDialog());
 }
 
 void onCollectedBackPressed(BuildContext context) async {
   showDialog(
       context: context,
       barrierDismissible: false,
-      builder: (context) => CompleteCollectionDialog());
+      builder: (context) => const CompleteCollectionDialog());
 }
 
 void onCompletedPressed(BuildContext context) async {
   showDialog(
       context: context,
       barrierDismissible: false,
-      builder: (context) => CompletedDialog());
+      builder: (context) => const CompletedDialog());
 }

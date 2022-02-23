@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:nhg_layout/constants/constants.dart';
-import 'package:nhg_layout/constants/styles.dart';
 
 class DefaultLogo extends StatelessWidget {
   final double? width;
@@ -18,8 +17,8 @@ class DefaultLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image.asset(
       AppImages.appLogo,
-      width: width == null ? 191.w : width,
-      height: height == null ? 81.h : height,
+      width: width ?? 191.w,
+      height: height ?? 81.h,
     );
   }
 }

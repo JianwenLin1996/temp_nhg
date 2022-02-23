@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:nhg_layout/utils/utils.dart';
 
 class ThemeNotifier extends ChangeNotifier {
-  ThemeData _theme = MyThemes.getThemeFromKey(MyThemeKeys.WORKER);
+  ThemeData _theme = MyThemes.getThemeFromKey(MyThemeKeys.worker);
   ThemeData get theme => _theme;
 
   changeTheme(MyThemeKeys themeKey) {

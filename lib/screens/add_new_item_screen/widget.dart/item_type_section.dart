@@ -7,15 +7,18 @@ import 'package:nhg_layout/models/item/item_type.dart';
 import 'package:nhg_layout/providers/providers.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
-typedef void IntCallBack(int id);
+typedef IntCallBack = void Function(int id);
 
 class ItemTypeSection extends StatelessWidget {
   final Function()? onAddNewItem;
   final IntCallBack onDeleteItem;
-  List<ItemType> itemTypeList;
-  ItemTypeSection(
-      {Key? key, this.onAddNewItem, required this.onDeleteItem, itemTypeList})
-      : this.itemTypeList = itemTypeList ?? [];
+  final List<ItemType> itemTypeList;
+  const ItemTypeSection(
+      {Key? key,
+      this.onAddNewItem,
+      required this.onDeleteItem,
+      this.itemTypeList = const <ItemType>[]})
+      : super(key: key);
 
   @override
   build(BuildContext context) {
@@ -32,8 +35,8 @@ class ItemTypeSection extends StatelessWidget {
             children: [
               Text(
                 AppStrings.itemType,
-                style:
-                    CustomTextStyle.itemStatusStyle(color: Styles.blackColor),
+                style: CustomTextStyle.itemStatusStyle(
+                    customColor: Styles.blackColor),
               ),
               InkWell(
                 onTap: onAddNewItem,
@@ -48,8 +51,8 @@ class ItemTypeSection extends StatelessWidget {
                     Text(
                       AppStrings.addNewItem,
                       style: CustomTextStyle.addNewStyle(
-                        color: appThemeColor,
-                        decoration: TextDecoration.underline,
+                        customColor: appThemeColor,
+                        customDecoration: TextDecoration.underline,
                       ),
                     ),
                   ],
@@ -102,7 +105,7 @@ class ItemTypeRow extends StatelessWidget {
                 child: Text(
                   itemType.name,
                   style: CustomTextStyle.notificationByStyle(
-                      color: Styles.blackColor),
+                      customColor: Styles.blackColor),
                 ),
               ),
               Expanded(
@@ -110,7 +113,7 @@ class ItemTypeRow extends StatelessWidget {
                 child: Text(
                   'X ' + itemType.amount.toString(),
                   style: CustomTextStyle.notificationByStyle(
-                      color: Styles.blackColor),
+                      customColor: Styles.blackColor),
                 ),
               ),
               Expanded(
@@ -130,7 +133,7 @@ class ItemTypeRow extends StatelessWidget {
                       Text(
                         AppStrings.del,
                         style: CustomTextStyle.notificationByStyle(
-                          color: Styles.delete,
+                          customColor: Styles.delete,
                         ),
                       ),
                     ],

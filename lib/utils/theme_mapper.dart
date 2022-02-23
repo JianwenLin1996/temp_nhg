@@ -1,10 +1,6 @@
-import 'dart:io' show Platform;
-
 import 'package:flutter/material.dart';
 
-import '../constants/styles.dart';
-
-enum MyThemeKeys { ADMIN, WORKER }
+enum MyThemeKeys { admin, worker }
 
 class MyThemes {
   // static const String appMainFontFamily = 'GothamBook';
@@ -20,9 +16,9 @@ class MyThemes {
   );
   static ThemeData getThemeFromKey(MyThemeKeys themeKey) {
     switch (themeKey) {
-      case MyThemeKeys.ADMIN:
+      case MyThemeKeys.admin:
         return workerTheme;
-      case MyThemeKeys.WORKER:
+      case MyThemeKeys.worker:
         return workerTheme;
 
       default:

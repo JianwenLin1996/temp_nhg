@@ -55,135 +55,157 @@ class Styles {
 }
 
 class CustomTextStyle extends TextStyle {
-  @override
-  final Color color;
-  @override
-  final FontWeight fontWeight;
-  @override
-  final double fontSize;
-  @override
-  final String fontFamily;
-  @override
-  TextDecoration? decoration;
+  final Color customColor;
+  final FontWeight customFontWeight;
+  final double customFontSize;
+  final String customFontFamily;
+  final TextDecoration? customDecoration;
 
-  CustomTextStyle({
-    required this.color,
-    required this.fontWeight,
-    required this.fontSize,
-    required this.fontFamily,
-    this.decoration,
-  });
+  const CustomTextStyle({
+    required this.customColor,
+    required this.customFontWeight,
+    required this.customFontSize,
+    required this.customFontFamily,
+    required this.customDecoration,
+  }) : super(
+            color: customColor,
+            fontWeight: customFontWeight,
+            fontSize: customFontSize,
+            fontFamily: customFontFamily,
+            decoration: customDecoration);
 
-  CustomTextStyle.copyRightStyle({this.color = Styles.lightGrey})
-      : fontFamily = 'SFProText',
-        fontWeight = Styles.lightText,
-        fontSize = 11.sp;
+  CustomTextStyle.copyRightStyle({
+    this.customColor = Styles.lightGrey,
+  })  : customFontFamily = 'SFProText',
+        customFontWeight = Styles.lightText,
+        customFontSize = 11.sp,
+        customDecoration = null;
 
   // Login & ForgotPassword screens
-  CustomTextStyle.pageTitleStyle({this.color = const Color(0xFF002251)})
-      : fontFamily = 'SFProDisplay',
-        fontWeight = Styles.boldText,
-        fontSize = 22.sp;
+  CustomTextStyle.pageTitleStyle({this.customColor = const Color(0xFF002251)})
+      : customFontFamily = 'SFProDisplay',
+        customFontWeight = Styles.boldText,
+        customFontSize = 22.sp,
+        customDecoration = null;
 
-  CustomTextStyle.pageDescriptionStyle({this.color = const Color(0xFFAAB2BE)})
-      : fontFamily = 'SFProDisplay',
-        fontWeight = Styles.regularText,
-        fontSize = 14.sp;
+  CustomTextStyle.pageDescriptionStyle(
+      {this.customColor = const Color(0xFFAAB2BE)})
+      : customFontFamily = 'SFProDisplay',
+        customFontWeight = Styles.regularText,
+        customFontSize = 14.sp,
+        customDecoration = null;
 
   CustomTextStyle.loginInputTitleStyle(
-      {this.color = const Color(0xFF002251), this.decoration = null})
-      : fontFamily = 'SFProDisplay',
-        fontWeight = Styles.mediumText,
-        fontSize = 14.sp;
+      {this.customColor = const Color(0xFF002251), this.customDecoration})
+      : customFontFamily = 'SFProDisplay',
+        customFontWeight = Styles.mediumText,
+        customFontSize = 14.sp;
 
   CustomTextStyle.generalInputStyle(
-      {this.color = const Color(0xFFC9CED6)}) // color for login hint text
-      : fontFamily = 'SFProDisplay',
-        fontWeight = Styles.regularText,
-        fontSize = 16.sp; // add new item dropdown //
+      {this.customColor = const Color(0xFFC9CED6)}) // color for login hint text
+      : customFontFamily = 'SFProDisplay',
+        customFontWeight = Styles.regularText,
+        customFontSize = 16.sp,
+        customDecoration = null; // add new item dropdown //
 
   // Home screen
 
-  CustomTextStyle.largerAppBarTitle({this.color = const Color(0xFF454F63)})
-      : fontFamily = 'SFProDisplay',
-        fontSize = 24.sp,
-        fontWeight = Styles.boldText;
+  CustomTextStyle.largerAppBarTitle(
+      {this.customColor = const Color(0xFF454F63)})
+      : customFontFamily = 'SFProDisplay',
+        customFontSize = 24.sp,
+        customFontWeight = Styles.boldText,
+        customDecoration = null;
 
-  CustomTextStyle.mediumAppBarTitle({this.color = const Color(0xFF454F63)})
-      : fontFamily = 'SFProDisplay',
-        fontSize = 20.sp,
-        fontWeight = Styles.mediumText;
+  CustomTextStyle.mediumAppBarTitle(
+      {this.customColor = const Color(0xFF454F63)})
+      : customFontFamily = 'SFProDisplay',
+        customFontSize = 20.sp,
+        customFontWeight = Styles.mediumText,
+        customDecoration = null;
 
   // Profile screen
 
   // Notification screen
 
   CustomTextStyle.notificationCategoryStyle(
-      {this.color = Styles.notificationCategoryDark})
-      : fontFamily = 'SFProText',
-        fontWeight = Styles.regularText,
-        fontSize = 16.sp;
+      {this.customColor = Styles.notificationCategoryDark})
+      : customFontFamily = 'SFProText',
+        customFontWeight = Styles.regularText,
+        customFontSize = 16.sp,
+        customDecoration = null;
 
   CustomTextStyle.notificationByStyle(
-      {this.color = Styles.notificationCategoryDark})
-      : fontFamily = 'SFProText',
-        fontWeight = Styles.mediumText,
-        fontSize = 13.sp; // add new item sub category // del
+      {this.customColor = Styles.notificationCategoryDark})
+      : customFontFamily = 'SFProText',
+        customFontWeight = Styles.mediumText,
+        customFontSize = 13.sp,
+        customDecoration = null; // add new item sub category // del
 
   CustomTextStyle.notificationMessageStyle(
-      {this.color = Styles.notificationCategoryDark})
-      : fontFamily = 'SFProText',
-        fontWeight = Styles.lightText,
-        fontSize = 13.sp;
+      {this.customColor = Styles.notificationCategoryDark})
+      : customFontFamily = 'SFProText',
+        customFontWeight = Styles.lightText,
+        customFontSize = 13.sp,
+        customDecoration = null;
 
   CustomTextStyle.notificationTimeStyle(
-      {this.color = Styles.notificationCategoryDark})
-      : fontFamily = 'SFProText',
-        fontWeight = Styles.regularText,
-        fontSize = 8.sp;
+      {this.customColor = Styles.notificationCategoryDark})
+      : customFontFamily = 'SFProText',
+        customFontWeight = Styles.regularText,
+        customFontSize = 8.sp,
+        customDecoration = null;
 
   // Item screen
-  CustomTextStyle.itemIdStyle({this.color = Styles.whiteColor})
-      : fontFamily = 'SFProDisplay',
-        fontWeight = Styles.regularText,
-        fontSize = 13.sp;
+  CustomTextStyle.itemIdStyle({this.customColor = Styles.whiteColor})
+      : customFontFamily = 'SFProDisplay',
+        customFontWeight = Styles.regularText,
+        customFontSize = 13.sp,
+        customDecoration = null;
 
-  CustomTextStyle.itemDescriptionStyle({this.color = Styles.profileInfoDark})
-      : fontFamily = 'SFProDisplay',
-        fontWeight = Styles.mediumText,
-        fontSize = 14.sp; // upload photo
+  CustomTextStyle.itemDescriptionStyle(
+      {this.customColor = Styles.profileInfoDark})
+      : customFontFamily = 'SFProDisplay',
+        customFontWeight = Styles.mediumText,
+        customFontSize = 14.sp,
+        customDecoration = null; // upload photo
 
-  CustomTextStyle.itemStatusStyle({this.color = Styles.whiteColor})
-      : fontFamily = 'SFProDisplay',
-        fontWeight = Styles.semiBoldText,
-        fontSize = 15.sp; // add new item category
+  CustomTextStyle.itemStatusStyle({this.customColor = Styles.whiteColor})
+      : customFontFamily = 'SFProDisplay',
+        customFontWeight = Styles.semiBoldText,
+        customFontSize = 15.sp,
+        customDecoration = null; // add new item category
 
   // Add New Item screen
 
   CustomTextStyle.addNewStyle(
-      {this.color = Styles.whiteColor, this.decoration = null})
-      : fontFamily = 'SFProText',
-        fontWeight = Styles.semiBoldText,
-        fontSize = 15.sp; // add new item
+      {this.customColor = Styles.whiteColor, this.customDecoration})
+      : customFontFamily = 'SFProText',
+        customFontWeight = Styles.semiBoldText,
+        customFontSize = 15.sp; // add new item
 
-  CustomTextStyle.noDestinationStyle({this.color = Styles.blackColor})
-      : fontFamily = 'SFProText',
-        fontWeight = Styles.regularText,
-        fontSize = 13.sp; // dialog category // location category
+  CustomTextStyle.noDestinationStyle({this.customColor = Styles.blackColor})
+      : customFontFamily = 'SFProText',
+        customFontWeight = Styles.regularText,
+        customFontSize = 13.sp,
+        customDecoration = null; // dialog category // location category
 
 // Item Detail screen
-  CustomTextStyle.detailStatusStyle({this.color = Styles.collected})
-      : fontFamily = 'SFProDisplay',
-        fontWeight = Styles.mediumText,
-        fontSize = 16.sp; // upload photo
+  CustomTextStyle.detailStatusStyle({this.customColor = Styles.collected})
+      : customFontFamily = 'SFProDisplay',
+        customFontWeight = Styles.mediumText,
+        customFontSize = 16.sp,
+        customDecoration = null; // upload photo
 
-  CustomTextStyle.greenButtonStyle({this.color = Styles.whiteColor})
-      : fontFamily = 'SFProText',
-        fontWeight = Styles.mediumText,
-        fontSize = 16.sp;
+  CustomTextStyle.greenButtonStyle({this.customColor = Styles.whiteColor})
+      : customFontFamily = 'SFProText',
+        customFontWeight = Styles.mediumText,
+        customFontSize = 16.sp,
+        customDecoration = null;
 
   CustomTextStyle.error(
-      {this.color = Styles.delete, this.fontFamily = 'SFProText'})
-      : fontWeight = Styles.boldText,
-        fontSize = Styles.regularFontSize;
+      {this.customColor = Styles.delete, this.customFontFamily = 'SFProText'})
+      : customFontWeight = Styles.boldText,
+        customFontSize = Styles.regularFontSize,
+        customDecoration = null;
 }

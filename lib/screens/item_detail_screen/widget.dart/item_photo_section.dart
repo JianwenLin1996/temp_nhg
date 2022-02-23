@@ -23,8 +23,8 @@ class ItemPhotoSection extends StatelessWidget {
         children: [
           Text(
             AppStrings.itemPhoto,
-            style:
-                CustomTextStyle.detailStatusStyle(color: Styles.itemCategory),
+            style: CustomTextStyle.detailStatusStyle(
+                customColor: Styles.itemCategory),
           ),
           DefaultSizedBox.vertical(9.h),
           SingleChildScrollView(

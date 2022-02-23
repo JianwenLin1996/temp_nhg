@@ -6,15 +6,15 @@ import 'package:nhg_layout/providers/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 class DefaultTextFormField extends StatelessWidget {
-  TextEditingController controller;
-  String? hintText;
-  TextStyle? hintTextStyle;
-  bool isLogin;
-  Color borderColor;
-  Color fillColor;
-  double? borderRadius;
-  int? line;
-  DefaultTextFormField(
+  final TextEditingController controller;
+  final String? hintText;
+  final TextStyle? hintTextStyle;
+  final bool isLogin;
+  final Color borderColor;
+  final Color fillColor;
+  final double? borderRadius;
+  final int? line;
+  const DefaultTextFormField(
       {Key? key,
       required this.controller,
       this.hintText,
@@ -37,10 +37,10 @@ class DefaultTextFormField extends StatelessWidget {
       textInputAction: TextInputAction.done,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       keyboardType: TextInputType.text,
-      inputFormatters: [],
+      inputFormatters: const [],
       textAlign: TextAlign.left,
       textAlignVertical: TextAlignVertical.center,
-      style: CustomTextStyle.generalInputStyle(color: Styles.blackColor),
+      style: CustomTextStyle.generalInputStyle(customColor: Styles.blackColor),
       onChanged: (val) {},
       onFieldSubmitted: (val) {},
       validator: (val) => null,

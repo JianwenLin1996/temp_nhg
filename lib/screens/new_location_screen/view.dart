@@ -3,10 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nhg_layout/constants/app_strings.dart';
 import 'package:nhg_layout/constants/constants.dart';
 import 'package:nhg_layout/constants/styles.dart';
-import 'package:nhg_layout/providers/providers.dart';
 import 'package:nhg_layout/screens/new_location_screen/widget.dart/input_field.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
-import 'package:provider/provider.dart';
 
 class NewLocationScreen extends StatefulWidget {
   const NewLocationScreen({Key? key}) : super(key: key);
@@ -23,7 +21,6 @@ class _NewLocationScreenState extends State<NewLocationScreen> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     nameController.dispose();
     addressController.dispose();
     personController.dispose();
@@ -33,8 +30,6 @@ class _NewLocationScreenState extends State<NewLocationScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Color appThemeColor =
-        Provider.of<ThemeNotifier>(context).theme.primaryColor;
     return Scaffold(
         resizeToAvoidBottomInset: true,
         body: Stack(

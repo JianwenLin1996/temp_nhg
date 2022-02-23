@@ -82,7 +82,7 @@ class DefaultAppBar extends StatelessWidget {
                             )
                           ]
                         : actionWidget == null
-                            ? actionIcons as List<Widget>
+                            ? actionIcons
                             : [actionWidget!],
                   )
                 ]
@@ -92,7 +92,7 @@ class DefaultAppBar extends StatelessWidget {
                     style: CustomTextStyle.largerAppBarTitle(),
                   ),
                   Row(
-                    children: actionIcons as List<Widget>,
+                    children: actionIcons,
                   )
                   // const [
                   //   AppBarActionIcon(

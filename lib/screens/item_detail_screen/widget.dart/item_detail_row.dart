@@ -16,7 +16,7 @@ class ItemDetailRow extends StatelessWidget {
   final dynamic info;
   final bool isNull;
   final bool isImage;
-  ItemDetailRow({
+  const ItemDetailRow({
     Key? key,
     required this.title,
     required this.info,
@@ -43,13 +43,13 @@ class ItemDetailRow extends StatelessWidget {
                           child: Text(
                             title,
                             style: CustomTextStyle.detailStatusStyle(
-                                color: Styles.itemCategory),
+                                customColor: Styles.itemCategory),
                           ),
                         ),
                         Text(
                           ':',
                           style: CustomTextStyle.detailStatusStyle(
-                              color: Styles.itemCategory),
+                              customColor: Styles.itemCategory),
                         ),
                       ],
                     ),
@@ -72,7 +72,7 @@ class ItemDetailRow extends StatelessWidget {
                                   ),
                                 ),
                               )
-                            : ItemDetailMapper(info)
+                            : itemDetailMapper(info)
                         // descriptionList.isEmpty
                         //     ? location == null
                         //         ? doImage == null
@@ -156,12 +156,13 @@ class ItemDetailRow extends StatelessWidget {
   }
 }
 
-Widget ItemDetailMapper(dynamic item) {
+Widget itemDetailMapper(dynamic item) {
   switch (item.runtimeType) {
     case String:
       return Text(
         item,
-        style: CustomTextStyle.generalInputStyle(color: Styles.blackColor),
+        style:
+            CustomTextStyle.generalInputStyle(customColor: Styles.blackColor),
       );
     case ItemDeliveryLocation:
       return Column(
@@ -169,12 +170,13 @@ Widget ItemDetailMapper(dynamic item) {
         children: [
           Text(
             item.name,
-            style: CustomTextStyle.detailStatusStyle(color: Styles.blackColor),
+            style: CustomTextStyle.detailStatusStyle(
+                customColor: Styles.blackColor),
           ),
           Text(
             item.address,
             style: CustomTextStyle.generalInputStyle(
-                color: const Color(0xFF9E9E9E)),
+                customColor: const Color(0xFF9E9E9E)),
           )
         ],
       );
@@ -185,8 +187,8 @@ Widget ItemDetailMapper(dynamic item) {
           ...item.map(
             (val) => Text(
               val.name + ' x' + val.amount.toString(),
-              style:
-                  CustomTextStyle.generalInputStyle(color: Styles.blackColor),
+              style: CustomTextStyle.generalInputStyle(
+                  customColor: Styles.blackColor),
             ),
           )
         ],
@@ -205,7 +207,7 @@ Widget ItemDetailMapper(dynamic item) {
             child: Text(
               item.label,
               style: CustomTextStyle.pageDescriptionStyle(
-                  color: Styles.whiteColor),
+                  customColor: Styles.whiteColor),
             ),
           ),
         ),
@@ -226,7 +228,8 @@ Widget ItemDetailMapper(dynamic item) {
     default:
       return Text(
         'test',
-        style: CustomTextStyle.generalInputStyle(color: Styles.blackColor),
+        style:
+            CustomTextStyle.generalInputStyle(customColor: Styles.blackColor),
       );
   }
 }

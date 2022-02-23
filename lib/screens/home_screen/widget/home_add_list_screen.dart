@@ -7,9 +7,7 @@ import 'package:nhg_layout/constants/icon_image_path.dart';
 import 'package:nhg_layout/models/item/item_delivery_location.dart';
 import 'package:nhg_layout/models/models.dart';
 import 'package:nhg_layout/routes/routes.dart';
-import 'package:nhg_layout/screens/home_screen/widget/empty_list_display.dart';
 import 'package:nhg_layout/screens/home_screen/widget/item_card.dart';
-import 'package:nhg_layout/utils/dateformat_utils.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
 class HomeAddListScreen extends StatefulWidget {
@@ -25,7 +23,7 @@ class _HomeAddListScreenState extends State<HomeAddListScreen>
     ItemDetail(
         id: '0001A',
         status: ItemStatus(id: 0, label: 'Sent Out'),
-        createdAt: DateTime.now().subtract(Duration(days: 3)),
+        createdAt: DateTime.now().subtract(const Duration(days: 3)),
         personInCharge: 'Su Xiaolian',
         sentBy: 'Bailey Tan',
         contact: '012-3322512',
@@ -43,7 +41,7 @@ class _HomeAddListScreenState extends State<HomeAddListScreen>
     ItemDetail(
         id: '0002B',
         status: ItemStatus(id: 0, label: 'Sent Out'),
-        createdAt: DateTime.now().subtract(Duration(days: 16)),
+        createdAt: DateTime.now().subtract(const Duration(days: 16)),
         personInCharge: 'Su Xiaolian',
         sentBy: 'Bailey Tan',
         contact: '012-3322512',
@@ -62,7 +60,6 @@ class _HomeAddListScreenState extends State<HomeAddListScreen>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 

@@ -44,7 +44,7 @@ class ProfileInfoRow extends StatelessWidget {
                 Text(
                   infoTitle + ' :',
                   style: CustomTextStyle.generalInputStyle(
-                      color: Styles.profileInfoGrey1),
+                      customColor: Styles.profileInfoGrey1),
                 ),
               ],
             ),
@@ -52,15 +52,15 @@ class ProfileInfoRow extends StatelessWidget {
                 ? Text(
                     info,
                     style: CustomTextStyle.loginInputTitleStyle(
-                        color: Styles.profileInfoDark),
+                        customColor: Styles.profileInfoDark),
                   )
                 : clickable
                     ? InkWell(
                         onTap: onTap ?? () {},
                         child: Text(AppStrings.changePassword,
                             style: CustomTextStyle.loginInputTitleStyle(
-                              color: appThemeColor,
-                              decoration: TextDecoration.underline,
+                              customColor: appThemeColor,
+                              customDecoration: TextDecoration.underline,
                             )),
                       )
                     : Row(children: [
@@ -72,7 +72,7 @@ class ProfileInfoRow extends StatelessWidget {
                         Text(
                           'Verified',
                           style: CustomTextStyle.loginInputTitleStyle(
-                              color: Styles.profileVerified),
+                              customColor: Styles.profileVerified),
                         )
                       ])
           ],

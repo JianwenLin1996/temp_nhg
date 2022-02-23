@@ -8,7 +8,7 @@ import 'package:nhg_layout/widgets/default_dropdown.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
 class CompleteCollectionDialog extends StatefulWidget {
-  CompleteCollectionDialog({
+  const CompleteCollectionDialog({
     Key? key,
   }) : super(key: key);
 
@@ -20,11 +20,11 @@ class CompleteCollectionDialog extends StatefulWidget {
 class _CompleteCollectionDialogState extends State<CompleteCollectionDialog> {
   List<DropdownMenuItem> itemTypeList = [
     DropdownMenuItem(
-      child: Text('Wooden Frame'),
+      child: const Text('Wooden Frame'),
       value: ItemType(id: 0, name: 'Wooden Frame', amount: 100),
     ),
     DropdownMenuItem(
-      child: Text('Iron Frame'),
+      child: const Text('Iron Frame'),
       value: ItemType(id: 1, name: 'Iron Frame', amount: 80),
     )
   ];
@@ -34,14 +34,12 @@ class _CompleteCollectionDialogState extends State<CompleteCollectionDialog> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     selectedItem = itemTypeList.first.value;
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
     quantityController.dispose();
     remarkController.dispose();
     super.dispose();
@@ -77,7 +75,7 @@ class _CompleteCollectionDialogState extends State<CompleteCollectionDialog> {
                       children: [
                         Text(AppStrings.collectedStatus,
                             style: CustomTextStyle.addNewStyle(
-                                color: Color(0xFF878787))),
+                                customColor: const Color(0xFF878787))),
                         InkWell(
                           onTap: () {
                             Navigator.pop(context);
@@ -93,7 +91,7 @@ class _CompleteCollectionDialogState extends State<CompleteCollectionDialog> {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Expanded(
+                        const Expanded(
                             flex: 3,
                             child: Text(AppStrings.itemCollect + ' :')),
                         Expanded(
@@ -108,13 +106,13 @@ class _CompleteCollectionDialogState extends State<CompleteCollectionDialog> {
                                         val.value.name,
                                         style:
                                             CustomTextStyle.generalInputStyle(
-                                                color: Styles.blackColor),
+                                                customColor: Styles.blackColor),
                                       ),
                                       Text(
                                         '0 / ' + val.value.amount.toString(),
                                         style:
                                             CustomTextStyle.generalInputStyle(
-                                                color: Styles.blackColor),
+                                                customColor: Styles.blackColor),
                                       )
                                     ],
                                   ))
@@ -127,7 +125,7 @@ class _CompleteCollectionDialogState extends State<CompleteCollectionDialog> {
                     Text(
                       AppStrings.selectItem + ' :',
                       style: CustomTextStyle.pageDescriptionStyle(
-                          color: Styles.blackColor),
+                          customColor: Styles.blackColor),
                     ),
                     DefaultSizedBox.vertical(10.h),
                     DefaultDropdown(
@@ -144,7 +142,7 @@ class _CompleteCollectionDialogState extends State<CompleteCollectionDialog> {
                     Text(
                       AppStrings.enterQuantity + ' :',
                       style: CustomTextStyle.pageDescriptionStyle(
-                          color: Styles.blackColor),
+                          customColor: Styles.blackColor),
                     ),
                     DefaultSizedBox.vertical(10.h),
                     DefaultTextFormField(
@@ -163,7 +161,7 @@ class _CompleteCollectionDialogState extends State<CompleteCollectionDialog> {
                     Text(
                       AppStrings.remark + ' :',
                       style: CustomTextStyle.pageDescriptionStyle(
-                          color: Styles.blackColor),
+                          customColor: Styles.blackColor),
                     ),
                     DefaultSizedBox.vertical(10.h),
                     DefaultTextFormField(

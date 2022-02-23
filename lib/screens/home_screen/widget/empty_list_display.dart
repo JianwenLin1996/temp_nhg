@@ -26,13 +26,13 @@ class EmptyListDisplay extends StatelessWidget {
         DefaultSizedBox.vertical(12.h),
         Text(
           AppStrings.noItem,
-          style:
-              CustomTextStyle.generalInputStyle(color: const Color(0xFFCED3DA)),
+          style: CustomTextStyle.generalInputStyle(
+              customColor: const Color(0xFFCED3DA)),
         ),
         DefaultSizedBox.vertical(4.h),
         Text(
           AppStrings.startCreateItem,
-          style: CustomTextStyle.generalInputStyle(color: appThemeColor),
+          style: CustomTextStyle.generalInputStyle(customColor: appThemeColor),
         ),
         DefaultSizedBox.vertical(4.h),
         const HomeScreenArrow(),
@@ -80,11 +80,9 @@ class EmptyListDisplay2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color appThemeColor =
-        Provider.of<ThemeNotifier>(context).theme.primaryColor;
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
-      children: [Text('page 2')],
+      children: const [Text('page 2')],
     );
   }
 }
@@ -94,11 +92,9 @@ class EmptyListDisplay3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color appThemeColor =
-        Provider.of<ThemeNotifier>(context).theme.primaryColor;
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [Text('page 3')],
+      children: const [Text('page 3')],
     );
   }
 }

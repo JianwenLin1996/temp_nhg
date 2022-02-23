@@ -5,7 +5,6 @@ import 'package:nhg_layout/models/item/item_delivery_location.dart';
 import 'package:nhg_layout/models/models.dart';
 import 'package:nhg_layout/screens/home_screen/widget/item_card.dart';
 import 'package:nhg_layout/screens/home_screen/widget/widget.dart';
-import 'package:nhg_layout/screens/profile_screen/view.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
 class HistoryScreen extends StatefulWidget {
@@ -20,7 +19,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
     ItemDetail(
         id: '0001A',
         status: ItemStatus(id: 1, label: 'Collected'),
-        createdAt: DateTime.now().subtract(Duration(days: 3)),
+        createdAt: DateTime.now().subtract(const Duration(days: 3)),
         personInCharge: 'Su Xiaolian',
         contact: '012-3322512',
         location: ItemDeliveryLocation(
@@ -36,7 +35,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
           ItemType(id: 0, name: 'Wooden Frame', amount: 66),
           ItemType(id: 1, name: 'Iron Frame', amount: 88)
         ],
-        closedAt: DateTime.now().subtract(Duration(days: 1)),
+        closedAt: DateTime.now().subtract(const Duration(days: 1)),
         deliveryOrder:
             ItemDeliveryOrder(image: AppImages.sampleDO, number: 'AB12266'),
         sentBy: 'Bailey Tan',
@@ -45,7 +44,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
     ItemDetail(
         id: '0002B',
         status: ItemStatus(id: 1, label: 'Collected'),
-        createdAt: DateTime.now().subtract(Duration(days: 16)),
+        createdAt: DateTime.now().subtract(const Duration(days: 16)),
         personInCharge: 'Su Xiaolian',
         contact: '012-3322512',
         location: ItemDeliveryLocation(
@@ -56,7 +55,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
         typeList: [ItemType(id: 1, name: 'Iron Frame', amount: 50)],
         //
         collectedList: [ItemType(id: 1, name: 'Iron Frame', amount: 35)],
-        closedAt: DateTime.now().subtract(Duration(days: 8)),
+        closedAt: DateTime.now().subtract(const Duration(days: 8)),
         deliveryOrder:
             ItemDeliveryOrder(image: AppImages.sampleDO, number: 'AB12258'),
         sentBy: 'Bailey Tan',

@@ -3,7 +3,6 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nhg_layout/constants/constants.dart';
 import 'package:nhg_layout/constants/styles.dart';
-import 'package:nhg_layout/routes/routes.dart';
 import 'package:nhg_layout/screens/login_screen/view.dart';
 import 'package:nhg_layout/widgets/default_sized_box.dart';
 import 'package:nhg_layout/widgets/fade_route.dart';
@@ -19,7 +18,6 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     WidgetsBinding.instance!.addPostFrameCallback((timeStamp) async {
       await Future.delayed(const Duration(seconds: 1));
@@ -46,7 +44,8 @@ class _SplashScreenState extends State<SplashScreen> {
             ))),
             Text(
               AppStrings.copyRightMessage,
-              style: CustomTextStyle.copyRightStyle(color: Styles.lightGrey),
+              style:
+                  CustomTextStyle.copyRightStyle(customColor: Styles.lightGrey),
             ),
             DefaultSizedBox.vertical(21.h)
           ],

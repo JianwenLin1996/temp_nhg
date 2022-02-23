@@ -3,9 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:nhg_layout/constants/constants.dart';
 import 'package:nhg_layout/constants/styles.dart';
-import 'package:nhg_layout/models/models.dart';
-import 'package:nhg_layout/screens/item_detail_screen/widget.dart/item_detail_row.dart';
-import 'package:nhg_layout/utils/dateformat_utils.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
 class UploadDOSection extends StatelessWidget {
@@ -70,14 +67,14 @@ class UploadDORow extends StatelessWidget {
                         Text(
                           title,
                           style: CustomTextStyle.detailStatusStyle(
-                              color: Styles.itemCategory),
+                              customColor: Styles.itemCategory),
                         ),
                         titleDescription == null
                             ? Container()
                             : Text(
                                 titleDescription!,
                                 style: CustomTextStyle.pageDescriptionStyle(
-                                    color: Styles.itemCategory),
+                                    customColor: Styles.itemCategory),
                               ),
                       ],
                     ),
@@ -85,7 +82,7 @@ class UploadDORow extends StatelessWidget {
                   Text(
                     ':',
                     style: CustomTextStyle.detailStatusStyle(
-                        color: Styles.itemCategory),
+                        customColor: Styles.itemCategory),
                   ),
                 ],
               ),

@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 
 import 'package:nhg_layout/constants/constants.dart';
 import 'package:nhg_layout/providers/providers.dart';
-import 'package:nhg_layout/screens/home_screen/widget/widget.dart';
 
 class DefaultBottomNavigationBar extends StatelessWidget {
   final int currentIndex;
@@ -18,8 +17,6 @@ class DefaultBottomNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color appThemeColor =
-        Provider.of<ThemeNotifier>(context).theme.primaryColor;
     return BottomNavigationBar(
         onTap: onTap ?? (value) {},
         // currentIndex: 0,

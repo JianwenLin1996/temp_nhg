@@ -23,7 +23,6 @@ class _ProfileScreenState extends State<ProfileScreen>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
@@ -62,7 +61,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                       Text(
                         'Personal Info',
                         style: CustomTextStyle.generalInputStyle(
-                            color: Styles.profileInfoGrey2),
+                            customColor: Styles.profileInfoGrey2),
                       ),
                       DefaultSizedBox.vertical(30.h),
                       ProfileInfoRow(
@@ -163,14 +162,14 @@ class ProfileUpperSection extends StatelessWidget {
           DefaultSizedBox.vertical(10.h),
           Text(
             user.userName,
-            style:
-                CustomTextStyle.pageTitleStyle(color: Styles.profileInfoDark),
+            style: CustomTextStyle.pageTitleStyle(
+                customColor: Styles.profileInfoDark),
           ),
           DefaultSizedBox.vertical(6.h),
           Text(
             user.userEmail,
             style: CustomTextStyle.generalInputStyle(
-                color: Styles.profileInfoGrey1),
+                customColor: Styles.profileInfoGrey1),
           ),
         ],
       ),

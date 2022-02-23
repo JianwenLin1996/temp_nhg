@@ -7,7 +7,7 @@ class DefaultDropdown extends StatelessWidget {
   final String hintText;
   final Function(dynamic) onChanged;
   final List<DropdownMenuItem> itemList;
-  final dynamic? selectedValue;
+  final dynamic selectedValue;
   const DefaultDropdown({
     Key? key,
     required this.hintText,
@@ -35,7 +35,8 @@ class DefaultDropdown extends StatelessWidget {
           isDense: true,
           hint: Text(
             hintText,
-            style: CustomTextStyle.generalInputStyle(color: Styles.blackColor),
+            style: CustomTextStyle.generalInputStyle(
+                customColor: Styles.blackColor),
           ),
           underline: const SizedBox(),
           icon: const SizedBox(),

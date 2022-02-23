@@ -135,14 +135,14 @@ class ItemCardRow extends StatelessWidget {
   final String iconPath;
   final String infoCategory;
   final String? normalInfo;
-  List<ItemType> listInfo;
-  ItemCardRow({
+  final List<ItemType> listInfo;
+  const ItemCardRow({
     Key? key,
     required this.iconPath,
     required this.infoCategory,
     this.normalInfo,
-    listInfo,
-  }) : this.listInfo = listInfo ?? [];
+    this.listInfo = const <ItemType>[],
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -163,13 +163,13 @@ class ItemCardRow extends StatelessWidget {
                 children: [
                   Text(
                     infoCategory,
-                    style:
-                        CustomTextStyle.itemIdStyle(color: Styles.itemCategory),
+                    style: CustomTextStyle.itemIdStyle(
+                        customColor: Styles.itemCategory),
                   ),
                   Text(
                     ': ',
-                    style:
-                        CustomTextStyle.itemIdStyle(color: Styles.itemCategory),
+                    style: CustomTextStyle.itemIdStyle(
+                        customColor: Styles.itemCategory),
                   ),
                 ],
               ),

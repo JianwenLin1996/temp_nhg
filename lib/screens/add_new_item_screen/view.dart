@@ -11,7 +11,6 @@ import 'package:nhg_layout/screens/add_new_item_screen/widget.dart/upload_photo_
 import 'package:nhg_layout/utils/utils.dart';
 
 import 'package:nhg_layout/widgets/widgets.dart';
-import 'package:provider/provider.dart';
 
 class AddNewItemScreen extends StatefulWidget {
   const AddNewItemScreen({Key? key}) : super(key: key);
