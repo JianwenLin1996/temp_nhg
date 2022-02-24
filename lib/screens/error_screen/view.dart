@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:nhg_layout/constants/constants.dart';
 
 class ErrorScreen extends StatefulWidget {

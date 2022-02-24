@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nhg_layout/constants/app_strings.dart';
+
 import 'package:nhg_layout/constants/constants.dart';
-import 'package:nhg_layout/constants/styles.dart';
-import 'package:nhg_layout/screens/new_location_screen/widget.dart/input_field.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
+import 'package:nhg_layout/screens/new_location_screen/widget/widget.dart';
 
 class ChangePasswordScreen extends StatefulWidget {
   const ChangePasswordScreen({Key? key}) : super(key: key);

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:nhg_layout/constants/constants.dart';
-import 'package:nhg_layout/constants/styles.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
 class ItemPhotoSection extends StatelessWidget {

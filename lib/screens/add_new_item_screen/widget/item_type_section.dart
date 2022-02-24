@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
 import 'package:nhg_layout/constants/constants.dart';
-import 'package:nhg_layout/models/item/item_type.dart';
+import 'package:nhg_layout/models/models.dart';
 import 'package:nhg_layout/providers/providers.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 

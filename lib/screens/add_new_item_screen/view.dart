@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:nhg_layout/constants/app_strings.dart';
 import 'package:nhg_layout/constants/constants.dart';
-import 'package:nhg_layout/constants/icon_image_path.dart';
-import 'package:nhg_layout/constants/styles.dart';
 import 'package:nhg_layout/models/models.dart';
-import 'package:nhg_layout/screens/add_new_item_screen/widget.dart/delivery_location_section.dart';
-import 'package:nhg_layout/screens/add_new_item_screen/widget.dart/item_type_section.dart';
-import 'package:nhg_layout/screens/add_new_item_screen/widget.dart/upload_photo_section.dart';
 import 'package:nhg_layout/utils/utils.dart';
-
 import 'package:nhg_layout/widgets/widgets.dart';
+import 'package:nhg_layout/screens/add_new_item_screen/widget/widget.dart';
 
 class AddNewItemScreen extends StatefulWidget {
   const AddNewItemScreen({Key? key}) : super(key: key);

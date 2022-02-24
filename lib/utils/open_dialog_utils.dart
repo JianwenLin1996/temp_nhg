@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nhg_layout/screens/add_new_item_screen/widget.dart/add_new_item_dialog.dart';
-import 'package:nhg_layout/screens/complete_collection_dialog/view.dart';
-import 'package:nhg_layout/screens/completed_dialog/view.dart';
+
+import 'package:nhg_layout/screens/add_new_item_screen/widget/widget.dart';
+import 'package:nhg_layout/screens/screens.dart';
 
 void onAddNewItemPressed(BuildContext context) async {
   showDialog(

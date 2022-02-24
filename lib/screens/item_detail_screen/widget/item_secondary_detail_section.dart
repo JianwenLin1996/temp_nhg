@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:nhg_layout/constants/constants.dart';
-import 'package:nhg_layout/constants/styles.dart';
 import 'package:nhg_layout/models/models.dart';
-import 'package:nhg_layout/screens/item_detail_screen/widget.dart/item_detail_row.dart';
-import 'package:nhg_layout/utils/dateformat_utils.dart';
+import 'package:nhg_layout/utils/utils.dart';
+import 'package:nhg_layout/screens/item_detail_screen/widget/widget.dart';
 
 class ItemSecondaryDetailSection extends StatelessWidget {
   final ItemDetail detail;

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
+
 import 'package:nhg_layout/constants/constants.dart';
 import 'package:nhg_layout/providers/providers.dart';
 import 'package:nhg_layout/routes/routes.dart';
-import 'package:nhg_layout/widgets/default_dropdown.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
-import 'package:provider/provider.dart';
 
 class DeliveryLocationSection extends StatelessWidget {
   const DeliveryLocationSection({Key? key}) : super(key: key);

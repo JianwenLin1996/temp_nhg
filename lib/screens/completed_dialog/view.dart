@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:nhg_layout/constants/constants.dart';
-import 'package:nhg_layout/constants/icon_image_path.dart';
-import 'package:nhg_layout/models/item/item_type.dart';
-import 'package:nhg_layout/routes/route_list.dart';
+import 'package:nhg_layout/models/models.dart';
+import 'package:nhg_layout/routes/routes.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
 class CompletedDialog extends StatefulWidget {

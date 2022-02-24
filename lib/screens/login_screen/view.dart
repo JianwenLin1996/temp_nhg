@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:nhg_layout/constants/app_strings.dart';
-import 'package:nhg_layout/constants/constants.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nhg_layout/constants/styles.dart';
-import 'package:nhg_layout/providers/theme_provider.dart';
+import 'package:provider/provider.dart';
+
+import 'package:nhg_layout/constants/constants.dart';
+import 'package:nhg_layout/providers/providers.dart';
 import 'package:nhg_layout/routes/routes.dart';
 import 'package:nhg_layout/screens/login_screen/widget/widget.dart';
-import 'package:nhg_layout/widgets/default_button.dart';
-import 'package:nhg_layout/widgets/default_sized_box.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
-import 'package:provider/provider.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);

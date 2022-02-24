@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:nhg_layout/constants/constants.dart';
-import 'package:nhg_layout/constants/styles.dart';
 import 'package:nhg_layout/screens/login_screen/view.dart';
-import 'package:nhg_layout/widgets/default_sized_box.dart';
-import 'package:nhg_layout/widgets/fade_route.dart';
 import 'package:nhg_layout/widgets/widgets.dart';
 
 class SplashScreen extends StatefulWidget {

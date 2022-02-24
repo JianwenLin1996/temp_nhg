@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:nhg_layout/routes/routes.dart';
 import 'package:nhg_layout/screens/home_screen/widget/widget.dart';
 import 'package:nhg_layout/screens/profile_screen/view.dart';
-import 'package:nhg_layout/widgets/default_bottom_navigation_bar.dart';
+import 'package:nhg_layout/widgets/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
