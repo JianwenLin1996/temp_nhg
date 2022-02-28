@@ -2,7 +2,6 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nhg_layout/providers/network_provider.dart';
 import 'package:nhg_layout/providers/providers.dart';
 import 'package:nhg_layout/providers/theme_provider.dart';
 import 'package:provider/provider.dart';
@@ -13,7 +12,9 @@ void main() {
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (_) => ThemeNotifier()),
     StreamProvider<ConnectivityResult>(
-        create: (_) => NetworkProvider().networkStatusController.stream,
+        create: (_) => NetworkProvider()
+            .networkStatusController
+            .stream, // so that ConnectivityResult is obtained from stream
         initialData: ConnectivityResult.wifi)
   ], child: const MyApp()));
 }
@@ -39,6 +40,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Consumer<ConnectivityResult>(
+      // initialization of network provider is done here
       builder: (_, value, __) => ScreenUtilInit(
         designSize: const Size(375, 812),
         builder: () => MaterialApp(

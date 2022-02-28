@@ -11,6 +11,15 @@ class AppStrings {
       'Device is connected to mobile data. Please beware of quota usage.';
   static const String connectedToWifiMessage = 'Device is connected to wifi.';
 
+  // API Exception Mapper
+  static const String noInternetConnection = 'No internet connection.';
+  static const String resourceNotFound = 'Resource not found.';
+  static const String unauthenticated = 'Unauthenticated.';
+  static const String internalServerError = 'Internal server error.';
+  static const String unknownError = 'Unknown error.';
+  static const String emptyResultError = 'Empty result error.';
+  static const String noInternet = 'No internet.';
+
   // Login screen
   static const String welcome = 'Welcome';
   static const String welcomeBack = 'Welcome Back';
