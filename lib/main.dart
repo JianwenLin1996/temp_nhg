@@ -1,6 +1,8 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nhg_layout/providers/network_provider.dart';
 import 'package:nhg_layout/providers/providers.dart';
 import 'package:nhg_layout/providers/theme_provider.dart';
 import 'package:provider/provider.dart';
@@ -10,6 +12,9 @@ import 'routes/routes.dart';
 void main() {
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (_) => ThemeNotifier()),
+    StreamProvider<ConnectivityResult>(
+        create: (_) => NetworkProvider().networkStatusController.stream,
+        initialData: ConnectivityResult.wifi)
   ], child: const MyApp()));
 }
 
@@ -33,15 +38,33 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(375, 812),
-      builder: () => MaterialApp(
-        // navigatorKey: Globals.navigatorKey, //for navigation service, cleaner code
-        title: 'NHG Management System',
-        theme: Provider.of<ThemeNotifier>(context).theme,
-        debugShowCheckedModeBanner: false,
-        initialRoute: RouteList.initialScreen,
-        onGenerateRoute: RouteGenerator.generateRoute,
+    return Consumer<ConnectivityResult>(
+      builder: (_, value, __) => ScreenUtilInit(
+        designSize: const Size(375, 812),
+        builder: () => MaterialApp(
+          // navigatorKey: Globals.navigatorKey, //for navigation service, cleaner code
+          title: 'NHG Management System',
+          theme: Provider.of<ThemeNotifier>(context).theme,
+          debugShowCheckedModeBanner: false,
+          initialRoute: RouteList.initialScreen,
+          onGenerateRoute: RouteGenerator.generateRoute,
+        ),
+
+        // builder: () => Consumer<ConnectivityResult>(builder: (_, value, __) {
+        //   if (value == ConnectivityResult.none) {
+        //     return const MaterialApp(
+        //         debugShowCheckedModeBanner: false, home: ErrorScreen());
+        //   } else {
+        //     return MaterialApp(
+        //       // navigatorKey: Globals.navigatorKey, //for navigation service, cleaner code
+        //       title: 'NHG Management System',
+        //       theme: Provider.of<ThemeNotifier>(context).theme,
+        //       debugShowCheckedModeBanner: false,
+        //       initialRoute: RouteList.initialScreen,
+        //       onGenerateRoute: RouteGenerator.generateRoute,
+        //     );
+        //   }
+        // }),
       ),
     );
   }

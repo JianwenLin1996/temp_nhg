@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Styles {
   static const FontWeight thin = FontWeight.w100;
@@ -75,7 +74,9 @@ class CustomTextStyle extends TextStyle {
             fontWeight: Styles.lightText,
             fontSize: fontSize,
             fontFamily: 'SFProText',
-            decoration: decoration);
+            decoration:
+                decoration); // if fontSize is set according to screensize using screenutils, it is not constant
+  // also considering that in many occasions, fontsize of one sp difference might be required, so make it a required parameter looks reasonable
 
   const CustomTextStyle.textRegular(
       {required fontSize, color = Styles.notificationCategoryDark, decoration})

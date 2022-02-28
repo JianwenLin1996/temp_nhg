@@ -4,6 +4,12 @@ class AppStrings {
   static const String errorPageMessage = 'PAGE NOT FOUND';
   static const String copyRightMessage =
       '\u00a9 NAM HENG GLASS GROUP. ALL RIGHT RESERVED';
+  static const String internetUnavailableMessage = 'You are currently offline.';
+  static const String internetAvailableMessage =
+      'Device is connected to internet.';
+  static const String connectedToDataMessage =
+      'Device is connected to mobile data. Please beware of quota usage.';
+  static const String connectedToWifiMessage = 'Device is connected to wifi.';
 
   // Login screen
   static const String welcome = 'Welcome';
