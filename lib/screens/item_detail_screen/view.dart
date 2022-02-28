@@ -73,8 +73,9 @@ class _ItemDetailScreenState extends State<ItemDetailScreen> {
                                       onPressed: () {
                                         onCollectedBackPressed(context);
                                       },
-                                      textStyle:
-                                          CustomTextStyle.greenButtonStyle(),
+                                      textStyle: CustomTextStyle.textMedium(
+                                          fontSize: 16.sp,
+                                          color: Styles.whiteColor),
                                       verticalPadding: 20.h,
                                       bgColor: const Color(0xFF63B90C),
                                       borderColor: const Color(0XFF305D02),
@@ -97,7 +98,8 @@ class _ItemDetailScreenState extends State<ItemDetailScreen> {
                       onTap: () {},
                       child: Text(
                         'Collected>',
-                        style: CustomTextStyle.detailStatusStyle(),
+                        style: CustomTextStyle.displayMedium(
+                            fontSize: 16.sp, color: Styles.collected),
                       ))
                   : null,
             )

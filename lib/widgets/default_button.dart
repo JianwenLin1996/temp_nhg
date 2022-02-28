@@ -54,8 +54,9 @@ class DefaultButton extends StatelessWidget {
                 child: Text(
                   buttonText,
                   style: textStyle == null
-                      ? CustomTextStyle.generalInputStyle(
-                          customColor: textColor ?? Styles.whiteColor)
+                      ? CustomTextStyle.displayRegular(
+                          fontSize: 16.sp,
+                          color: textColor ?? Styles.whiteColor)
                       : null,
                 ),
               )),
@@ -104,9 +105,11 @@ class UploadPhotoButton extends StatelessWidget {
                       width: 17.w,
                     ),
                     DefaultSizedBox.horizontal(10.w),
-                    Text(AppStrings.uploadPhoto,
-                        style: CustomTextStyle.itemDescriptionStyle(
-                            customColor: Styles.whiteColor)),
+                    Text(
+                      AppStrings.uploadPhoto,
+                      style: CustomTextStyle.displayMedium(
+                          fontSize: 14.sp, color: Styles.whiteColor),
+                    ),
                   ],
                 ),
               )),

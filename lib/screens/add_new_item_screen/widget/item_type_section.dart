@@ -35,8 +35,7 @@ class ItemTypeSection extends StatelessWidget {
             children: [
               Text(
                 AppStrings.itemType,
-                style: CustomTextStyle.itemStatusStyle(
-                    customColor: Styles.blackColor),
+                style: CustomTextStyle.displaySemiBold(fontSize: 15.sp),
               ),
               InkWell(
                 onTap: onAddNewItem,
@@ -50,9 +49,10 @@ class ItemTypeSection extends StatelessWidget {
                     DefaultSizedBox.horizontal(5.w),
                     Text(
                       AppStrings.addNewItem,
-                      style: CustomTextStyle.addNewStyle(
-                        customColor: appThemeColor,
-                        customDecoration: TextDecoration.underline,
+                      style: CustomTextStyle.textSemiBold(
+                        fontSize: 15.sp,
+                        color: appThemeColor,
+                        decoration: TextDecoration.underline,
                       ),
                     ),
                   ],
@@ -104,16 +104,16 @@ class ItemTypeRow extends StatelessWidget {
                 flex: 5,
                 child: Text(
                   itemType.name,
-                  style: CustomTextStyle.notificationByStyle(
-                      customColor: Styles.blackColor),
+                  style: CustomTextStyle.textMedium(
+                      fontSize: 13.sp, color: Styles.blackColor),
                 ),
               ),
               Expanded(
                 flex: 2,
                 child: Text(
                   'X ' + itemType.amount.toString(),
-                  style: CustomTextStyle.notificationByStyle(
-                      customColor: Styles.blackColor),
+                  style: CustomTextStyle.textMedium(
+                      fontSize: 13.sp, color: Styles.blackColor),
                 ),
               ),
               Expanded(
@@ -132,8 +132,9 @@ class ItemTypeRow extends StatelessWidget {
                       DefaultSizedBox.horizontal(8.w),
                       Text(
                         AppStrings.del,
-                        style: CustomTextStyle.notificationByStyle(
-                          customColor: Styles.delete,
+                        style: CustomTextStyle.textMedium(
+                          fontSize: 13.sp,
+                          color: Styles.delete,
                         ),
                       ),
                     ],

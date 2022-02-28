@@ -2,14 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Styles {
-  // Splash screen
-  static double fontSize10 = 13.sp;
-  static double smallerRegularFontSize = 17.sp;
-  static double regularFontSize = 21.sp;
-  static double smallerTitleFontSize = 25.sp;
-  static double titleFontSize = 29.sp;
-  static double largerTitleFontSize = 33.sp;
-
   static const FontWeight thin = FontWeight.w100;
   static const FontWeight lightText = FontWeight.w300;
   static const FontWeight regularText = FontWeight.normal;
@@ -55,157 +47,107 @@ class Styles {
 }
 
 class CustomTextStyle extends TextStyle {
-  final Color customColor;
-  final FontWeight customFontWeight;
-  final double customFontSize;
-  final String customFontFamily;
-  final TextDecoration? customDecoration;
+  // final Color customColor;
+  // final FontWeight customFontWeight;
+  // final double customFontSize;
+  // final String customFontFamily;
+  // final TextDecoration? customDecoration;
 
   const CustomTextStyle({
-    required this.customColor,
-    required this.customFontWeight,
-    required this.customFontSize,
-    required this.customFontFamily,
-    required this.customDecoration,
+    color,
+    fontWeight,
+    fontSize,
+    fontFamily,
+    decoration,
   }) : super(
-            color: customColor,
-            fontWeight: customFontWeight,
-            fontSize: customFontSize,
-            fontFamily: customFontFamily,
-            decoration: customDecoration);
+            color: color,
+            fontWeight: fontWeight,
+            fontSize: fontSize,
+            fontFamily: fontFamily,
+            decoration: decoration);
 
-  CustomTextStyle.copyRightStyle({
-    this.customColor = Styles.lightGrey,
-  })  : customFontFamily = 'SFProText',
-        customFontWeight = Styles.lightText,
-        customFontSize = 11.sp,
-        customDecoration = null;
+  ///// SF Pro Text /////
 
-  // Login & ForgotPassword screens
-  CustomTextStyle.pageTitleStyle({this.customColor = const Color(0xFF002251)})
-      : customFontFamily = 'SFProDisplay',
-        customFontWeight = Styles.boldText,
-        customFontSize = 22.sp,
-        customDecoration = null;
+  const CustomTextStyle.textLight(
+      {required fontSize, color = Styles.lightGrey, decoration})
+      : super(
+            color: color,
+            fontWeight: Styles.lightText,
+            fontSize: fontSize,
+            fontFamily: 'SFProText',
+            decoration: decoration);
 
-  CustomTextStyle.pageDescriptionStyle(
-      {this.customColor = const Color(0xFFAAB2BE)})
-      : customFontFamily = 'SFProDisplay',
-        customFontWeight = Styles.regularText,
-        customFontSize = 14.sp,
-        customDecoration = null;
+  const CustomTextStyle.textRegular(
+      {required fontSize, color = Styles.notificationCategoryDark, decoration})
+      : super(
+            color: color,
+            fontWeight: Styles.regularText,
+            fontSize: fontSize,
+            fontFamily: 'SFProText',
+            decoration: decoration);
 
-  CustomTextStyle.loginInputTitleStyle(
-      {this.customColor = const Color(0xFF002251), this.customDecoration})
-      : customFontFamily = 'SFProDisplay',
-        customFontWeight = Styles.mediumText,
-        customFontSize = 14.sp;
+  const CustomTextStyle.textMedium(
+      {required fontSize, color = Styles.notificationCategoryDark, decoration})
+      : super(
+            color: color,
+            fontWeight: Styles.mediumText,
+            fontSize: fontSize,
+            fontFamily: 'SFProText',
+            decoration: decoration);
 
-  CustomTextStyle.generalInputStyle(
-      {this.customColor = const Color(0xFFC9CED6)}) // color for login hint text
-      : customFontFamily = 'SFProDisplay',
-        customFontWeight = Styles.regularText,
-        customFontSize = 16.sp,
-        customDecoration = null; // add new item dropdown //
+  const CustomTextStyle.textSemiBold(
+      {required fontSize, color = Styles.whiteColor, decoration})
+      : super(
+            color: color,
+            fontWeight: Styles.semiBoldText,
+            fontSize: fontSize,
+            fontFamily: 'SFProText',
+            decoration: decoration);
 
-  // Home screen
+  const CustomTextStyle.textBold(
+      {required fontSize, color = Styles.delete, decoration})
+      : super(
+            color: color,
+            fontWeight: Styles.boldText,
+            fontSize: fontSize,
+            fontFamily: 'SFProText',
+            decoration: decoration);
 
-  CustomTextStyle.largerAppBarTitle(
-      {this.customColor = const Color(0xFF454F63)})
-      : customFontFamily = 'SFProDisplay',
-        customFontSize = 24.sp,
-        customFontWeight = Styles.boldText,
-        customDecoration = null;
+  ///// SF Pro Display /////
 
-  CustomTextStyle.mediumAppBarTitle(
-      {this.customColor = const Color(0xFF454F63)})
-      : customFontFamily = 'SFProDisplay',
-        customFontSize = 20.sp,
-        customFontWeight = Styles.mediumText,
-        customDecoration = null;
+  const CustomTextStyle.displayRegular(
+      {required fontSize, color = const Color(0xFFAAB2BE), decoration})
+      : super(
+            color: color,
+            fontWeight: Styles.regularText,
+            fontSize: fontSize,
+            fontFamily: 'SFProDisplay',
+            decoration: decoration);
 
-  // Profile screen
+  const CustomTextStyle.displayMedium(
+      {required fontSize, color = const Color(0xFF002251), decoration})
+      : super(
+            color: color,
+            fontWeight: Styles.mediumText,
+            fontSize: fontSize,
+            fontFamily: 'SFProDisplay',
+            decoration: decoration);
 
-  // Notification screen
+  const CustomTextStyle.displaySemiBold(
+      {required fontSize, color = Styles.blackColor, decoration})
+      : super(
+            color: color,
+            fontWeight: Styles.semiBoldText,
+            fontSize: fontSize,
+            fontFamily: 'SFProDisplay',
+            decoration: decoration);
 
-  CustomTextStyle.notificationCategoryStyle(
-      {this.customColor = Styles.notificationCategoryDark})
-      : customFontFamily = 'SFProText',
-        customFontWeight = Styles.regularText,
-        customFontSize = 16.sp,
-        customDecoration = null;
-
-  CustomTextStyle.notificationByStyle(
-      {this.customColor = Styles.notificationCategoryDark})
-      : customFontFamily = 'SFProText',
-        customFontWeight = Styles.mediumText,
-        customFontSize = 13.sp,
-        customDecoration = null; // add new item sub category // del
-
-  CustomTextStyle.notificationMessageStyle(
-      {this.customColor = Styles.notificationCategoryDark})
-      : customFontFamily = 'SFProText',
-        customFontWeight = Styles.lightText,
-        customFontSize = 13.sp,
-        customDecoration = null;
-
-  CustomTextStyle.notificationTimeStyle(
-      {this.customColor = Styles.notificationCategoryDark})
-      : customFontFamily = 'SFProText',
-        customFontWeight = Styles.regularText,
-        customFontSize = 8.sp,
-        customDecoration = null;
-
-  // Item screen
-  CustomTextStyle.itemIdStyle({this.customColor = Styles.whiteColor})
-      : customFontFamily = 'SFProDisplay',
-        customFontWeight = Styles.regularText,
-        customFontSize = 13.sp,
-        customDecoration = null;
-
-  CustomTextStyle.itemDescriptionStyle(
-      {this.customColor = Styles.profileInfoDark})
-      : customFontFamily = 'SFProDisplay',
-        customFontWeight = Styles.mediumText,
-        customFontSize = 14.sp,
-        customDecoration = null; // upload photo
-
-  CustomTextStyle.itemStatusStyle({this.customColor = Styles.whiteColor})
-      : customFontFamily = 'SFProDisplay',
-        customFontWeight = Styles.semiBoldText,
-        customFontSize = 15.sp,
-        customDecoration = null; // add new item category
-
-  // Add New Item screen
-
-  CustomTextStyle.addNewStyle(
-      {this.customColor = Styles.whiteColor, this.customDecoration})
-      : customFontFamily = 'SFProText',
-        customFontWeight = Styles.semiBoldText,
-        customFontSize = 15.sp; // add new item
-
-  CustomTextStyle.noDestinationStyle({this.customColor = Styles.blackColor})
-      : customFontFamily = 'SFProText',
-        customFontWeight = Styles.regularText,
-        customFontSize = 13.sp,
-        customDecoration = null; // dialog category // location category
-
-// Item Detail screen
-  CustomTextStyle.detailStatusStyle({this.customColor = Styles.collected})
-      : customFontFamily = 'SFProDisplay',
-        customFontWeight = Styles.mediumText,
-        customFontSize = 16.sp,
-        customDecoration = null; // upload photo
-
-  CustomTextStyle.greenButtonStyle({this.customColor = Styles.whiteColor})
-      : customFontFamily = 'SFProText',
-        customFontWeight = Styles.mediumText,
-        customFontSize = 16.sp,
-        customDecoration = null;
-
-  CustomTextStyle.error(
-      {this.customColor = Styles.delete, this.customFontFamily = 'SFProText'})
-      : customFontWeight = Styles.boldText,
-        customFontSize = Styles.regularFontSize,
-        customDecoration = null;
+  const CustomTextStyle.displayBold(
+      {required fontSize, color = const Color(0xFF002251), decoration})
+      : super(
+            color: color,
+            fontWeight: Styles.boldText,
+            fontSize: fontSize,
+            fontFamily: 'SFProDisplay',
+            decoration: decoration);
 }

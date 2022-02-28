@@ -27,7 +27,7 @@ class _LoginInputFieldState extends State<LoginInputField> {
       children: [
         Text(
           widget.title,
-          style: CustomTextStyle.loginInputTitleStyle(),
+          style: CustomTextStyle.displayMedium(fontSize: 14.sp),
         ),
         DefaultSizedBox.vertical(16.h),
         DefaultTextFormField(

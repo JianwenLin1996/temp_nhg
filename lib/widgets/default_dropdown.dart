@@ -35,8 +35,8 @@ class DefaultDropdown extends StatelessWidget {
           isDense: true,
           hint: Text(
             hintText,
-            style: CustomTextStyle.generalInputStyle(
-                customColor: Styles.blackColor),
+            style: CustomTextStyle.displayRegular(
+                fontSize: 16.sp, color: Styles.blackColor),
           ),
           underline: const SizedBox(),
           icon: const SizedBox(),

@@ -23,8 +23,7 @@ class _UploadPhotoSectionState extends State<UploadPhotoSection> {
         children: [
           Text(
             AppStrings.addItemPhoto,
-            style:
-                CustomTextStyle.itemStatusStyle(customColor: Styles.blackColor),
+            style: CustomTextStyle.displaySemiBold(fontSize: 15.sp),
           ),
           DefaultSizedBox.vertical(26.h),
           UploadPhotoButton(

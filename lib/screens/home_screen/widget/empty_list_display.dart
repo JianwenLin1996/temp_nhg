@@ -26,13 +26,14 @@ class EmptyListDisplay extends StatelessWidget {
         DefaultSizedBox.vertical(12.h),
         Text(
           AppStrings.noItem,
-          style: CustomTextStyle.generalInputStyle(
-              customColor: const Color(0xFFCED3DA)),
+          style: CustomTextStyle.displayRegular(
+              fontSize: 16.sp, color: const Color(0xFFCED3DA)),
         ),
         DefaultSizedBox.vertical(4.h),
         Text(
           AppStrings.startCreateItem,
-          style: CustomTextStyle.generalInputStyle(customColor: appThemeColor),
+          style: CustomTextStyle.displayRegular(
+              fontSize: 16.sp, color: appThemeColor),
         ),
         DefaultSizedBox.vertical(4.h),
         const HomeScreenArrow(),
@@ -56,7 +57,7 @@ class HomeScreenArrow extends StatelessWidget {
             '|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n',
             style: TextStyle(
                 fontWeight: FontWeight.w900,
-                fontSize: Styles.titleFontSize,
+                fontSize: 29.sp,
                 color: appThemeColor),
           ),
           Transform.translate(

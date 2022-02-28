@@ -67,7 +67,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                             child: Text(
                               'Today',
                               style:
-                                  CustomTextStyle.notificationCategoryStyle(),
+                                  CustomTextStyle.textRegular(fontSize: 16.sp),
                             ),
                           ),
                           ListView.builder(

@@ -65,23 +65,24 @@ class UploadDORow extends StatelessWidget {
                       children: [
                         Text(
                           title,
-                          style: CustomTextStyle.detailStatusStyle(
-                              customColor: Styles.itemCategory),
+                          style: CustomTextStyle.displayMedium(
+                              fontSize: 16.sp, color: Styles.itemCategory),
                         ),
                         titleDescription == null
                             ? Container()
                             : Text(
                                 titleDescription!,
-                                style: CustomTextStyle.pageDescriptionStyle(
-                                    customColor: Styles.itemCategory),
+                                style: CustomTextStyle.displayRegular(
+                                    fontSize: 14.sp,
+                                    color: Styles.itemCategory),
                               ),
                       ],
                     ),
                   ),
                   Text(
                     ':',
-                    style: CustomTextStyle.detailStatusStyle(
-                        customColor: Styles.itemCategory),
+                    style: CustomTextStyle.displayMedium(
+                        fontSize: 16.sp, color: Styles.itemCategory),
                   ),
                 ],
               ),

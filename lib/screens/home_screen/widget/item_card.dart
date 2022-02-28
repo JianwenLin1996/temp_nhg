@@ -57,11 +57,13 @@ class ItemCardStatusSection extends StatelessWidget {
         children: [
           Text(
             AppStrings.itemId + ': ' + id,
-            style: CustomTextStyle.itemIdStyle(),
+            style: CustomTextStyle.displayRegular(
+                fontSize: 13.sp, color: Styles.whiteColor),
           ),
           Text(
             status.label,
-            style: CustomTextStyle.itemStatusStyle(),
+            style: CustomTextStyle.displaySemiBold(
+                fontSize: 15.sp, color: Styles.whiteColor),
           )
         ],
       ),
@@ -160,16 +162,19 @@ class ItemCardRow extends StatelessWidget {
               flex: 1,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    infoCategory,
-                    style: CustomTextStyle.itemIdStyle(
-                        customColor: Styles.itemCategory),
+                  Expanded(
+                    child: Text(
+                      infoCategory,
+                      style: CustomTextStyle.displayRegular(
+                          fontSize: 13.sp, color: Styles.itemCategory),
+                    ),
                   ),
                   Text(
                     ': ',
-                    style: CustomTextStyle.itemIdStyle(
-                        customColor: Styles.itemCategory),
+                    style: CustomTextStyle.displayRegular(
+                        fontSize: 13.sp, color: Styles.itemCategory),
                   ),
                 ],
               ),
@@ -179,7 +184,8 @@ class ItemCardRow extends StatelessWidget {
                     flex: 2,
                     child: Text(
                       normalInfo ?? '',
-                      style: CustomTextStyle.itemDescriptionStyle(),
+                      style: CustomTextStyle.displayMedium(
+                          fontSize: 14.sp, color: Styles.profileInfoDark),
                     ),
                   )
                 : Expanded(
@@ -190,7 +196,8 @@ class ItemCardRow extends StatelessWidget {
                         ...listInfo.map(
                           (val) => Text(
                             val.name + ' x ' + val.amount.toString(),
-                            style: CustomTextStyle.itemDescriptionStyle(),
+                            style: CustomTextStyle.displayMedium(
+                                fontSize: 14.sp, color: Styles.profileInfoDark),
                           ),
                         ),
                       ],

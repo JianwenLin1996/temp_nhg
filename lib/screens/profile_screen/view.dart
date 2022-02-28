@@ -58,8 +58,8 @@ class _ProfileScreenState extends State<ProfileScreen>
                     children: [
                       Text(
                         'Personal Info',
-                        style: CustomTextStyle.generalInputStyle(
-                            customColor: Styles.profileInfoGrey2),
+                        style: CustomTextStyle.displayRegular(
+                            fontSize: 16.sp, color: Styles.profileInfoGrey2),
                       ),
                       DefaultSizedBox.vertical(30.h),
                       ProfileInfoRow(
@@ -160,14 +160,14 @@ class ProfileUpperSection extends StatelessWidget {
           DefaultSizedBox.vertical(10.h),
           Text(
             user.userName,
-            style: CustomTextStyle.pageTitleStyle(
-                customColor: Styles.profileInfoDark),
+            style: CustomTextStyle.displayBold(
+                fontSize: 22.sp, color: Styles.profileInfoDark),
           ),
           DefaultSizedBox.vertical(6.h),
           Text(
             user.userEmail,
-            style: CustomTextStyle.generalInputStyle(
-                customColor: Styles.profileInfoGrey1),
+            style: CustomTextStyle.displayRegular(
+                fontSize: 16.sp, color: Styles.profileInfoGrey1),
           ),
         ],
       ),

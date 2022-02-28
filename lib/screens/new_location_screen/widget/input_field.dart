@@ -21,7 +21,7 @@ class InputField extends StatelessWidget {
       children: [
         Text(
           title,
-          style: CustomTextStyle.noDestinationStyle(),
+          style: CustomTextStyle.textRegular(fontSize: 13.sp),
         ),
         DefaultSizedBox.vertical(10.h),
         DefaultTextFormField(

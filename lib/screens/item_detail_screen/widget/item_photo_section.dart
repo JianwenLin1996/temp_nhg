@@ -22,8 +22,8 @@ class ItemPhotoSection extends StatelessWidget {
         children: [
           Text(
             AppStrings.itemPhoto,
-            style: CustomTextStyle.detailStatusStyle(
-                customColor: Styles.itemCategory),
+            style: CustomTextStyle.displayMedium(
+                fontSize: 16.sp, color: Styles.itemCategory),
           ),
           DefaultSizedBox.vertical(9.h),
           SingleChildScrollView(

@@ -25,13 +25,12 @@ class DeliveryLocationSection extends StatelessWidget {
             children: [
               Text(
                 AppStrings.location,
-                style: CustomTextStyle.itemStatusStyle(
-                    customColor: Styles.blackColor),
+                style: CustomTextStyle.displaySemiBold(fontSize: 15.sp),
               ),
               DefaultSizedBox.vertical(25.h),
               Text(
                 AppStrings.location,
-                style: CustomTextStyle.notificationByStyle(),
+                style: CustomTextStyle.textMedium(fontSize: 13.sp),
               ),
               DefaultSizedBox.vertical(10.h),
               // DropdownButtonFormField(
@@ -79,7 +78,7 @@ class DeliveryLocationSection extends StatelessWidget {
                 children: [
                   Text(
                     AppStrings.noDestination,
-                    style: CustomTextStyle.noDestinationStyle(),
+                    style: CustomTextStyle.textRegular(fontSize: 13.sp),
                   ),
                   InkWell(
                     onTap: () {
@@ -95,9 +94,10 @@ class DeliveryLocationSection extends StatelessWidget {
                         DefaultSizedBox.horizontal(5.w),
                         Text(
                           AppStrings.newLocation,
-                          style: CustomTextStyle.addNewStyle(
-                            customColor: appThemeColor,
-                            customDecoration: TextDecoration.underline,
+                          style: CustomTextStyle.textSemiBold(
+                            fontSize: 15.sp,
+                            color: appThemeColor,
+                            decoration: TextDecoration.underline,
                           ),
                         ),
                       ],
@@ -108,8 +108,8 @@ class DeliveryLocationSection extends StatelessWidget {
               DefaultSizedBox.vertical(10.h),
               Text(
                 AppStrings.newAddress,
-                style: CustomTextStyle.noDestinationStyle(
-                    customColor: Styles.profileInfoGrey2),
+                style: CustomTextStyle.textRegular(
+                    fontSize: 13.sp, color: Styles.profileInfoGrey2),
               ),
               DefaultSizedBox.vertical(25.h),
               DefaultButton(

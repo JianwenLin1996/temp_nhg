@@ -72,12 +72,12 @@ class _CompletedDialogState extends State<CompletedDialog> {
                   DefaultSizedBox.vertical(21.h),
                   Text(
                     AppStrings.completed,
-                    style: CustomTextStyle.pageTitleStyle(),
+                    style: CustomTextStyle.displayBold(fontSize: 22.sp),
                   ),
                   DefaultSizedBox.vertical(8.h),
                   Text(
                     AppStrings.completeMessage,
-                    style: CustomTextStyle.pageDescriptionStyle(),
+                    style: CustomTextStyle.displayRegular(fontSize: 14.sp),
                   ),
                   DefaultSizedBox.vertical(26.h),
                   DefaultButton(

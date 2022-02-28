@@ -43,24 +43,25 @@ class ProfileInfoRow extends StatelessWidget {
                 DefaultSizedBox.horizontal(12.w),
                 Text(
                   infoTitle + ' :',
-                  style: CustomTextStyle.generalInputStyle(
-                      customColor: Styles.profileInfoGrey1),
+                  style: CustomTextStyle.displayRegular(
+                      fontSize: 16.sp, color: Styles.profileInfoGrey1),
                 ),
               ],
             ),
             (!clickable && !status)
                 ? Text(
                     info,
-                    style: CustomTextStyle.loginInputTitleStyle(
-                        customColor: Styles.profileInfoDark),
+                    style: CustomTextStyle.displayMedium(
+                        fontSize: 14.sp, color: Styles.profileInfoDark),
                   )
                 : clickable
                     ? InkWell(
                         onTap: onTap ?? () {},
                         child: Text(AppStrings.changePassword,
-                            style: CustomTextStyle.loginInputTitleStyle(
-                              customColor: appThemeColor,
-                              customDecoration: TextDecoration.underline,
+                            style: CustomTextStyle.displayMedium(
+                              fontSize: 14.sp,
+                              color: appThemeColor,
+                              decoration: TextDecoration.underline,
                             )),
                       )
                     : Row(children: [
@@ -71,8 +72,8 @@ class ProfileInfoRow extends StatelessWidget {
                         DefaultSizedBox.horizontal(4.w),
                         Text(
                           'Verified',
-                          style: CustomTextStyle.loginInputTitleStyle(
-                              customColor: Styles.profileVerified),
+                          style: CustomTextStyle.displayMedium(
+                              fontSize: 14.sp, color: Styles.profileVerified),
                         )
                       ])
           ],

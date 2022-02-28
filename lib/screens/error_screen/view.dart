@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:nhg_layout/constants/constants.dart';
 
@@ -16,7 +17,7 @@ class _ErrorScreenState extends State<ErrorScreen> {
       body: Center(
         child: Text(
           AppStrings.errorPageMessage,
-          style: CustomTextStyle.error(),
+          style: CustomTextStyle.textBold(fontSize: 21.sp),
         ),
       ),
     );

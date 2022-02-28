@@ -41,14 +41,14 @@ class ItemDetailRow extends StatelessWidget {
                         Expanded(
                           child: Text(
                             title,
-                            style: CustomTextStyle.detailStatusStyle(
-                                customColor: Styles.itemCategory),
+                            style: CustomTextStyle.displayMedium(
+                                fontSize: 16.sp, color: Styles.itemCategory),
                           ),
                         ),
                         Text(
                           ':',
-                          style: CustomTextStyle.detailStatusStyle(
-                              customColor: Styles.itemCategory),
+                          style: CustomTextStyle.displayMedium(
+                              fontSize: 16.sp, color: Styles.itemCategory),
                         ),
                       ],
                     ),
@@ -160,8 +160,8 @@ Widget itemDetailMapper(dynamic item) {
     case String:
       return Text(
         item,
-        style:
-            CustomTextStyle.generalInputStyle(customColor: Styles.blackColor),
+        style: CustomTextStyle.displayRegular(
+            fontSize: 16.sp, color: Styles.blackColor),
       );
     case ItemDeliveryLocation:
       return Column(
@@ -169,13 +169,13 @@ Widget itemDetailMapper(dynamic item) {
         children: [
           Text(
             item.name,
-            style: CustomTextStyle.detailStatusStyle(
-                customColor: Styles.blackColor),
+            style: CustomTextStyle.displayMedium(
+                fontSize: 16.sp, color: Styles.blackColor),
           ),
           Text(
             item.address,
-            style: CustomTextStyle.generalInputStyle(
-                customColor: const Color(0xFF9E9E9E)),
+            style: CustomTextStyle.displayRegular(
+                fontSize: 16.sp, color: const Color(0xFF9E9E9E)),
           )
         ],
       );
@@ -186,8 +186,8 @@ Widget itemDetailMapper(dynamic item) {
           ...item.map(
             (val) => Text(
               val.name + ' x' + val.amount.toString(),
-              style: CustomTextStyle.generalInputStyle(
-                  customColor: Styles.blackColor),
+              style: CustomTextStyle.displayRegular(
+                  fontSize: 16.sp, color: Styles.blackColor),
             ),
           )
         ],
@@ -205,8 +205,8 @@ Widget itemDetailMapper(dynamic item) {
           child: Center(
             child: Text(
               item.label,
-              style: CustomTextStyle.pageDescriptionStyle(
-                  customColor: Styles.whiteColor),
+              style: CustomTextStyle.displayRegular(
+                  fontSize: 14.sp, color: Styles.whiteColor),
             ),
           ),
         ),
@@ -227,8 +227,8 @@ Widget itemDetailMapper(dynamic item) {
     default:
       return Text(
         'test',
-        style:
-            CustomTextStyle.generalInputStyle(customColor: Styles.blackColor),
+        style: CustomTextStyle.displayRegular(
+            fontSize: 16.sp, color: Styles.blackColor),
       );
   }
 }

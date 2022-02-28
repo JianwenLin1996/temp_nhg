@@ -71,7 +71,8 @@ class DefaultAppBar extends StatelessWidget {
                       )),
                   Text(
                     titleText,
-                    style: CustomTextStyle.mediumAppBarTitle(),
+                    style: CustomTextStyle.displayMedium(
+                        fontSize: 20.sp, color: const Color(0xFF454F63)),
                   ),
                   Row(
                     children: actionIcons.isEmpty && actionWidget == null
@@ -89,7 +90,8 @@ class DefaultAppBar extends StatelessWidget {
               : [
                   Text(
                     titleText,
-                    style: CustomTextStyle.largerAppBarTitle(),
+                    style: CustomTextStyle.displayBold(
+                        fontSize: 24.sp, color: const Color(0xFF454F63)),
                   ),
                   Row(
                     children: actionIcons,

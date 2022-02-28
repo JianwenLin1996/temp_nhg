@@ -73,8 +73,9 @@ class _CompleteCollectionDialogState extends State<CompleteCollectionDialog> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(AppStrings.collectedStatus,
-                            style: CustomTextStyle.addNewStyle(
-                                customColor: const Color(0xFF878787))),
+                            style: CustomTextStyle.textSemiBold(
+                                fontSize: 15.sp,
+                                color: const Color(0xFF878787))),
                         InkWell(
                           onTap: () {
                             Navigator.pop(context);
@@ -103,15 +104,15 @@ class _CompleteCollectionDialogState extends State<CompleteCollectionDialog> {
                                     children: [
                                       Text(
                                         val.value.name,
-                                        style:
-                                            CustomTextStyle.generalInputStyle(
-                                                customColor: Styles.blackColor),
+                                        style: CustomTextStyle.displayRegular(
+                                            fontSize: 16.sp,
+                                            color: Styles.blackColor),
                                       ),
                                       Text(
                                         '0 / ' + val.value.amount.toString(),
-                                        style:
-                                            CustomTextStyle.generalInputStyle(
-                                                customColor: Styles.blackColor),
+                                        style: CustomTextStyle.displayRegular(
+                                            fontSize: 16.sp,
+                                            color: Styles.blackColor),
                                       )
                                     ],
                                   ))
@@ -123,8 +124,8 @@ class _CompleteCollectionDialogState extends State<CompleteCollectionDialog> {
                     DefaultSizedBox.vertical(30.h),
                     Text(
                       AppStrings.selectItem + ' :',
-                      style: CustomTextStyle.pageDescriptionStyle(
-                          customColor: Styles.blackColor),
+                      style: CustomTextStyle.displayRegular(
+                          fontSize: 14.sp, color: Styles.blackColor),
                     ),
                     DefaultSizedBox.vertical(10.h),
                     DefaultDropdown(
@@ -140,8 +141,8 @@ class _CompleteCollectionDialogState extends State<CompleteCollectionDialog> {
                     DefaultSizedBox.vertical(36.h),
                     Text(
                       AppStrings.enterQuantity + ' :',
-                      style: CustomTextStyle.pageDescriptionStyle(
-                          customColor: Styles.blackColor),
+                      style: CustomTextStyle.displayRegular(
+                          fontSize: 14, color: Styles.blackColor),
                     ),
                     DefaultSizedBox.vertical(10.h),
                     DefaultTextFormField(
@@ -159,8 +160,8 @@ class _CompleteCollectionDialogState extends State<CompleteCollectionDialog> {
                     DefaultSizedBox.vertical(45.h),
                     Text(
                       AppStrings.remark + ' :',
-                      style: CustomTextStyle.pageDescriptionStyle(
-                          customColor: Styles.blackColor),
+                      style: CustomTextStyle.displayRegular(
+                          fontSize: 14, color: Styles.blackColor),
                     ),
                     DefaultSizedBox.vertical(10.h),
                     DefaultTextFormField(
@@ -172,7 +173,7 @@ class _CompleteCollectionDialogState extends State<CompleteCollectionDialog> {
                     Center(
                       child: Text(
                         AppStrings.clickCompleteMessage,
-                        style: CustomTextStyle.noDestinationStyle(),
+                        style: CustomTextStyle.textRegular(fontSize: 13.sp),
                         textAlign: TextAlign.center,
                       ),
                     ),

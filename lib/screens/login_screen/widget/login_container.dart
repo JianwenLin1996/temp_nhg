@@ -34,12 +34,12 @@ class LoginContainer extends StatelessWidget {
                     children: [
                       Text(
                         title,
-                        style: CustomTextStyle.pageTitleStyle(),
+                        style: CustomTextStyle.displayBold(fontSize: 22.sp),
                       ),
                       DefaultSizedBox.vertical(7.h),
                       Text(
                         description,
-                        style: CustomTextStyle.pageDescriptionStyle(),
+                        style: CustomTextStyle.displayRegular(fontSize: 14.sp),
                       ),
                       DefaultSizedBox.vertical(36.h),
                       child ?? Container(),

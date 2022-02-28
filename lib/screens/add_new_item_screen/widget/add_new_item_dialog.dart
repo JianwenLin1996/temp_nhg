@@ -77,7 +77,7 @@ class _AddNewItemDialogState extends State<AddNewItemDialog> {
                     DefaultSizedBox.vertical(25.h),
                     Text(
                       AppStrings.item,
-                      style: CustomTextStyle.noDestinationStyle(),
+                      style: CustomTextStyle.textRegular(fontSize: 13.sp),
                     ),
                     DefaultSizedBox.vertical(10.h),
                     DefaultDropdown(
@@ -93,7 +93,7 @@ class _AddNewItemDialogState extends State<AddNewItemDialog> {
                     DefaultSizedBox.vertical(36.h),
                     Text(
                       AppStrings.quantity,
-                      style: CustomTextStyle.noDestinationStyle(),
+                      style: CustomTextStyle.textRegular(fontSize: 13.sp),
                     ),
                     DefaultSizedBox.vertical(10.h),
                     DefaultTextFormField(

@@ -50,11 +50,13 @@ class NotificationRow extends StatelessWidget {
                       text: item.notificationBy == null
                           ? ''
                           : (item.notificationBy! + ' '),
-                      style: CustomTextStyle.notificationByStyle(),
+                      style: CustomTextStyle.textMedium(fontSize: 13.sp),
                       children: <TextSpan>[
                         TextSpan(
                           text: item.notificationMessage,
-                          style: CustomTextStyle.notificationMessageStyle(),
+                          style: CustomTextStyle.textLight(
+                              fontSize: 13.sp,
+                              color: Styles.notificationCategoryDark),
                         )
                       ],
                     ),
@@ -63,7 +65,7 @@ class NotificationRow extends StatelessWidget {
                   Text(
                     DateFormatUtils.dateTimeDifferenceFormatter(
                         item.notificationCreatedAt),
-                    style: CustomTextStyle.notificationTimeStyle(),
+                    style: CustomTextStyle.textRegular(fontSize: 8.sp),
                   )
                 ],
               ),

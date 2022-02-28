@@ -40,7 +40,8 @@ class DefaultTextFormField extends StatelessWidget {
       inputFormatters: const [],
       textAlign: TextAlign.left,
       textAlignVertical: TextAlignVertical.center,
-      style: CustomTextStyle.generalInputStyle(customColor: Styles.blackColor),
+      style: CustomTextStyle.displayRegular(
+          fontSize: 16.sp, color: Styles.blackColor),
       onChanged: (val) {},
       onFieldSubmitted: (val) {},
       validator: (val) => null,
@@ -49,10 +50,9 @@ class DefaultTextFormField extends StatelessWidget {
         fillColor: isLogin ? Styles.loginInput : fillColor,
         hintText: hintText ?? '',
         helperText: null,
-        errorStyle: TextStyle(
-          fontSize: Styles.smallerRegularFontSize,
-        ),
-        hintStyle: hintTextStyle ?? CustomTextStyle.generalInputStyle(),
+        errorStyle: TextStyle(fontSize: 17.sp),
+        hintStyle:
+            hintTextStyle ?? CustomTextStyle.displayRegular(fontSize: 16.sp),
         enabledBorder: OutlineInputBorder(
             borderRadius:
                 BorderRadius.all(Radius.circular(borderRadius ?? 12.r)),

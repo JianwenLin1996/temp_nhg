@@ -42,8 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ))),
             Text(
               AppStrings.copyRightMessage,
-              style:
-                  CustomTextStyle.copyRightStyle(customColor: Styles.lightGrey),
+              style: CustomTextStyle.textLight(fontSize: 11.sp),
             ),
             DefaultSizedBox.vertical(21.h)
           ],
