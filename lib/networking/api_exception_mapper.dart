@@ -23,12 +23,12 @@ abstract class ApiExceptionMapper {
       } else if (error is EmptyResultException) {
         return emptyResultError;
       } else {
-        // return unknownError;
-        return null;
+        return unknownError;
+        // return null;
       }
     } else {
-      // return unknownError;
-      return null;
+      return unknownError;
+      // return null;
     }
   }
 }

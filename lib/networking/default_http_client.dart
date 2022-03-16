@@ -98,7 +98,7 @@ class DefaultHttpClient {
       String filename = basename(image.path);
 
       http.MultipartFile multipartFile = http.MultipartFile.fromBytes(
-        'file',
+        'file', //field name
         compressedImageData,
         filename: filename,
         contentType: MediaType("image", filename),
